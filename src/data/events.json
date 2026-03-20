@@ -1,0 +1,75 @@
+{
+  "events": [
+    {
+      "id": "1",
+      "title": "Annual Design Conference 2025",
+      "description": "Join us for the biggest design conference of the year! Network with industry leaders and learn about the latest trends in design. This three-day event will feature keynote speakers, workshops, panel discussions, and networking opportunities.",
+      "date": "2025-03-15T09:00:00Z",
+      "endDate": "2025-03-17T17:00:00Z",
+      "location": "San Francisco Convention Center",
+      "address": "747 Howard St, San Francisco, CA 94103",
+      "image": "https://images.pexels.com/photos/2774556/pexels-photo-2774556.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "attendees": 234,
+      "interested": 567,
+      "category": "Design & Technology",
+      "price": 299,
+      "organizer": {
+        "name": "Design Community SF",
+        "avatar": "https://images.pexels.com/photos/1680172/pexels-photo-1680172.jpeg?auto=compress&cs=tinysrgb&w=150",
+        "verified": true,
+        "events": 45,
+        "followers": 12500
+      },
+      "privacy": "public",
+      "tags": ["design", "conference", "networking", "technology", "workshop"],
+      "schedule": [
+        {
+          "time": "09:00 AM",
+          "title": "Registration & Breakfast",
+          "description": "Pick up your conference materials and enjoy a complimentary breakfast"
+        },
+        {
+          "time": "10:00 AM",
+          "title": "Keynote: Future of Design",
+          "speaker": "Sarah Johnson",
+          "role": "Design Director at TechCo"
+        },
+        {
+          "time": "11:30 AM",
+          "title": "Workshop: UI/UX Trends",
+          "speaker": "Michael Chen",
+          "role": "Senior Product Designer"
+        },
+        {
+          "time": "01:00 PM",
+          "title": "Lunch Break",
+          "description": "Networking lunch with fellow attendees"
+        },
+        {
+          "time": "02:00 PM",
+          "title": "Panel Discussion: Design Systems",
+          "description": "Industry experts discuss the evolution of design systems"
+        },
+        {
+          "time": "03:30 PM",
+          "title": "Workshop: Design Tools Masterclass",
+          "speaker": "Emma Wilson",
+          "role": "Design Tools Specialist"
+        },
+        {
+          "time": "05:00 PM",
+          "title": "Networking Reception",
+          "description": "Connect with speakers and attendees over drinks and appetizers"
+        }
+      ],
+      "amenities": [
+        "Free WiFi",
+        "Complimentary Breakfast & Lunch",
+        "Conference Materials",
+        "Recording Access",
+        "Networking Events",
+        "Certificate of Attendance"
+      ]
+    }
+  ]
+} 

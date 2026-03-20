@@ -1,0 +1,45 @@
+{
+  "id": "1",
+  "title": "MacBook Pro 16\" M2 Pro",
+  "price": 2199,
+  "condition": "Like New",
+  "location": "San Francisco, CA",
+  "description": "Selling my MacBook Pro 16\" with M2 Pro chip. Only 3 months old, in perfect condition with original box and accessories. Features:\n\n• M2 Pro chip with 12-core CPU\n• 16GB unified memory\n• 512GB SSD storage\n• 16-inch Liquid Retina XDR display\n• Space Gray\n\nIncludes original charger, box, and AppleCare+ until 2025.",
+  "category": "Electronics",
+  "listed": "2025-02-15T14:35:00Z",
+  "views": 156,
+  "saves": 24,
+  "images": [
+    "https://images.pexels.com/photos/303383/pexels-photo-303383.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "https://images.pexels.com/photos/812264/pexels-photo-812264.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "https://images.pexels.com/photos/5412270/pexels-photo-5412270.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+  ],
+  "seller": {
+    "id": "1",
+    "name": "Alex Johnson",
+    "avatar": "https://images.pexels.com/photos/1680172/pexels-photo-1680172.jpeg?auto=compress&cs=tinysrgb&w=150",
+    "rating": 4.9,
+    "reviews": 128,
+    "memberSince": "2023",
+    "responseTime": "< 1 hour",
+    "verified": true,
+    "listings": 15
+  },
+  "tags": ["laptop", "apple", "macbook", "tech"],
+  "relatedItems": [
+    {
+      "id": "2",
+      "title": "MacBook Air M2",
+      "price": 1199,
+      "image": "https://images.pexels.com/photos/812264/pexels-photo-812264.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "location": "Berkeley, CA"
+    },
+    {
+      "id": "3",
+      "title": "iPad Pro 12.9\"",
+      "price": 899,
+      "image": "https://images.pexels.com/photos/1334597/pexels-photo-1334597.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "location": "Oakland, CA"
+    }
+  ]
+} 
