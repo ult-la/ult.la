@@ -25,7 +25,7 @@ const getInterestIcon = (interest: string) => {
 
 export const ProfileCard = ({ profile, onSwipe }: ProfileCardProps) => {
   return (
-    <div className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+    <div className="bg-palette-card rounded-xl shadow-sm border border-palette-border overflow-hidden">
       {/* Profile Card */}
       <div className="relative h-[600px]">
         <img
@@ -57,13 +57,13 @@ export const ProfileCard = ({ profile, onSwipe }: ProfileCardProps) => {
         <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex items-center gap-4">
           <button 
             onClick={() => onSwipe('left')}
-            className="p-4 bg-white rounded-full shadow-lg hover:bg-gray-100 transition-colors"
+            className="p-4 bg-palette-card rounded-full shadow-lg hover:bg-palette-hover transition-colors"
           >
-            <X className="h-6 w-6 text-gray-500" />
+            <X className="h-6 w-6 text-palette-tertiary" />
           </button>
-          <button 
+          <button
             onClick={() => onSwipe('right')}
-            className="p-4 bg-white rounded-full shadow-lg hover:bg-gray-100 transition-colors"
+            className="p-4 bg-palette-card rounded-full shadow-lg hover:bg-palette-hover transition-colors"
           >
             <Heart className="h-6 w-6 text-red-500" />
           </button>
@@ -71,16 +71,16 @@ export const ProfileCard = ({ profile, onSwipe }: ProfileCardProps) => {
       </div>
 
       {/* Profile Details */}
-      <div className="p-6 border-t border-gray-200">
+      <div className="p-6 border-t border-palette-border">
         <h3 className="text-lg font-semibold mb-2">About Me</h3>
-        <p className="text-gray-600">{profile.bio}</p>
+        <p className="text-palette-secondary">{profile.bio}</p>
         
         <h3 className="text-lg font-semibold mt-6 mb-3">Interests</h3>
         <div className="flex flex-wrap gap-2">
           {profile.interests.map((interest, index) => (
             <span 
               key={index}
-              className="px-3 py-1.5 bg-gray-100 text-gray-700 rounded-full text-sm font-medium flex items-center gap-1"
+              className="px-3 py-1.5 bg-palette-bg text-palette-primary rounded-full text-sm font-medium flex items-center gap-1"
             >
               {getInterestIcon(interest)}
               {interest}

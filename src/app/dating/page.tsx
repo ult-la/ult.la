@@ -22,7 +22,7 @@ const Dating = () => {
   };
 
   return (
-    <div className="max-w-4xl mx-auto">
+    <div className="max-w-5xl mx-auto px-4">
       <div className="flex flex-col md:flex-row gap-6">
         {/* Main Content */}
         <div className="flex-1">

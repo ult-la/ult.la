@@ -20,7 +20,7 @@ const formatDate = (dateString: string) => {
 
 export const EventCard = ({ event }: EventCardProps) => {
   return (
-    <Link href={`/event`} className="bg-white rounded-xl border border-gray-200 overflow-hidden hover:shadow-md transition-shadow">
+    <Link href={`/event`} className="bg-palette-card rounded-xl border border-palette-border overflow-hidden hover:shadow-md transition-shadow">
       <div className="relative h-48">
         <img
           src={event.image}
@@ -31,21 +31,21 @@ export const EventCard = ({ event }: EventCardProps) => {
           className={`absolute top-3 right-3 p-2 rounded-full ${
             event.saved 
               ? 'bg-blue-600 text-white' 
-              : 'bg-white bg-opacity-90 text-gray-700'
+              : 'bg-palette-card bg-opacity-90 text-palette-primary'
           }`}
         >
           <Star className="h-5 w-5" />
         </button>
-        <div className="absolute bottom-3 left-3 bg-white px-2 py-1 rounded-lg text-sm font-medium">
+        <div className="absolute bottom-3 left-3 bg-palette-card px-2 py-1 rounded-lg text-sm font-medium">
           {event.category}
         </div>
       </div>
       
       <div className="p-4">
-        <h3 className="text-lg font-semibold text-gray-900 mb-2">{event.title}</h3>
-        <p className="text-sm text-gray-600 mb-4 line-clamp-2">{event.description}</p>
-        
-        <div className="space-y-2 text-sm text-gray-500">
+        <h3 className="text-lg font-semibold text-palette-primary mb-2">{event.title}</h3>
+        <p className="text-sm text-palette-secondary mb-4 line-clamp-2">{event.description}</p>
+
+        <div className="space-y-2 text-sm text-palette-tertiary">
           <IconText icon={Calendar} text={formatDate(event.date)} />
           <IconText icon={MapPin} text={event.location} />
           <IconText icon={Users} text={`${event.attendees} attending`} />

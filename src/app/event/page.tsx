@@ -44,21 +44,21 @@ const Event = () => {
           />
 
           {/* Event Description */}
-          <div className="mt-6 bg-white rounded-xl shadow-sm border border-gray-200 p-6">
-            <h2 className="text-xl font-semibold text-gray-900 mb-4">
+          <div className="mt-6 bg-palette-card rounded-xl shadow-sm border border-palette-border p-6">
+            <h2 className="text-xl font-semibold text-palette-primary mb-4">
               About This Event
             </h2>
-            <p className="text-gray-600 whitespace-pre-line">
+            <p className="text-palette-secondary whitespace-pre-line">
               {event.description}
             </p>
 
             <div className="mt-6">
-              <h3 className="font-semibold text-gray-900 mb-2">Tags</h3>
+              <h3 className="font-semibold text-palette-primary mb-2">Tags</h3>
               <div className="flex flex-wrap gap-2">
                 {event.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm"
+                    className="px-3 py-1 bg-palette-bg text-palette-primary rounded-full text-sm"
                   >
                     #{tag}
                   </span>

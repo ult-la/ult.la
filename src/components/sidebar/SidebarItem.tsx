@@ -21,14 +21,14 @@ const SidebarItem = ({
   return (
     <Link
       href={href}
-      className="flex items-center px-3 py-2 text-gray-700 hover:bg-gray-100 hover:text-blue-600 rounded-lg transition-colors duration-150 ease-in-out"
+      className="flex items-center px-3 py-2 text-palette-primary hover:bg-palette-hover hover:text-blue-600 rounded-lg transition-colors duration-150 ease-in-out"
     >
       {shortcutIcon ? (
         <div className={`w-8 h-8 ${shortcutBgColor} ${shortcutTextColor} rounded-lg flex items-center justify-center mr-3`}>
           {shortcutIcon}
         </div>
       ) : (
-        <span className="text-gray-500 group-hover:text-blue-600 mr-3">
+        <span className="text-palette-secondary group-hover:text-blue-600 mr-3">
           {icon}
         </span>
       )}

@@ -62,8 +62,8 @@ const LeftSidebar = () => {
         ))}
       </div>
       
-      <div className="mt-6 pt-6 border-t border-gray-200">
-        <h3 className="px-3 text-xs font-semibold text-gray-500 uppercase tracking-wider">
+      <div className="mt-6 pt-6 border-t border-palette-border">
+        <h3 className="px-3 text-xs font-semibold text-palette-secondary uppercase tracking-wider">
           Your Shortcuts
         </h3>
         <div className="mt-3 space-y-1">
@@ -80,7 +80,7 @@ const LeftSidebar = () => {
         </div>
       </div>
       
-      <div className="mt-6 pt-6 border-t border-gray-200 text-xs text-gray-500">
+      <div className="mt-6 pt-6 border-t border-palette-border text-xs text-palette-secondary">
         <div className="flex flex-wrap gap-2 px-3">
           <a href="/privacy" className="hover:underline">Privacy</a>
           <span>·</span>

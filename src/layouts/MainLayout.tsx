@@ -26,7 +26,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
   ].includes(pathname);
 
   return (
-    <div className="min-h-screen bg-gray-100">
+    <div className="min-h-screen bg-palette-bg">
       <Navbar />
 
       <div className="pt-16 pb-8">

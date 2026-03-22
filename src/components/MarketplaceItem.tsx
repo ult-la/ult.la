@@ -19,7 +19,7 @@ export const MarketplaceItem = ({ item, viewMode }: MarketplaceItemProps) => {
   return (
     <Link href={`/marketplace/item`} className="block">
       <div 
-        className={`bg-white rounded-xl border border-gray-200 overflow-hidden hover:shadow-md transition-shadow ${
+        className={`bg-palette-card rounded-xl border border-palette-border overflow-hidden hover:shadow-md transition-shadow ${
           viewMode === 'list' ? 'flex' : ''
         }`}
       >
@@ -33,7 +33,7 @@ export const MarketplaceItem = ({ item, viewMode }: MarketplaceItemProps) => {
             className={`absolute top-3 right-3 p-2 rounded-full ${
               item.saved 
                 ? 'bg-red-500 text-white' 
-                : 'bg-white bg-opacity-90 text-gray-700'
+                : 'bg-palette-card bg-opacity-90 text-palette-primary'
             }`}
           >
             <Heart className="h-5 w-5" />
@@ -43,7 +43,7 @@ export const MarketplaceItem = ({ item, viewMode }: MarketplaceItemProps) => {
         <div className="p-4 flex-1">
           <div className="flex items-start justify-between">
             <div>
-              <h3 className="text-lg font-semibold text-gray-900">{item.title}</h3>
+              <h3 className="text-lg font-semibold text-palette-primary">{item.title}</h3>
               <p className="text-2xl font-bold text-blue-600 mt-1">{formatPrice(item.price)}</p>
             </div>
             <span className="px-2 py-1 bg-blue-100 text-blue-800 text-xs font-medium rounded">
@@ -51,7 +51,7 @@ export const MarketplaceItem = ({ item, viewMode }: MarketplaceItemProps) => {
             </span>
           </div>
           
-          <div className="mt-4 space-y-2 text-sm text-gray-500">
+          <div className="mt-4 space-y-2 text-sm text-palette-tertiary">
             <div className="flex items-center gap-2">
               <MapPin className="h-4 w-4" />
               {item.location}
@@ -66,8 +66,8 @@ export const MarketplaceItem = ({ item, viewMode }: MarketplaceItemProps) => {
                 className="h-8 w-8 rounded-full object-cover"
               />
               <div>
-                <div className="text-sm font-medium text-gray-900">{item.seller.name}</div>
-                <div className="text-xs text-gray-500">★ {item.seller.rating}</div>
+                <div className="text-sm font-medium text-palette-primary">{item.seller.name}</div>
+                <div className="text-xs text-palette-tertiary">★ {item.seller.rating}</div>
               </div>
             </div>
             

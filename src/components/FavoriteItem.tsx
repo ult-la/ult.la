@@ -17,7 +17,7 @@ const formatDate = (dateString: string) => {
 export const FavoriteItem = ({ item, viewMode }: FavoriteItemProps) => {
   return (
     <div 
-      className={`bg-white rounded-xl border border-gray-200 overflow-hidden hover:shadow-md transition-shadow ${
+      className={`bg-palette-card rounded-xl border border-palette-border overflow-hidden hover:shadow-md transition-shadow ${
         viewMode === 'list' ? 'flex' : ''
       }`}
     >
@@ -28,14 +28,14 @@ export const FavoriteItem = ({ item, viewMode }: FavoriteItemProps) => {
           className="w-full h-full object-cover"
         />
         <div className="absolute top-3 right-3 flex gap-2">
-          <button className="p-2 bg-white bg-opacity-90 rounded-full hover:bg-opacity-100 transition-opacity">
-            <Share2 className="h-4 w-4 text-gray-700" />
+          <button className="p-2 bg-palette-card bg-opacity-90 rounded-full hover:bg-opacity-100 transition-opacity">
+            <Share2 className="h-4 w-4 text-palette-primary" />
           </button>
-          <button className="p-2 bg-white bg-opacity-90 rounded-full hover:bg-opacity-100 transition-opacity">
+          <button className="p-2 bg-palette-card bg-opacity-90 rounded-full hover:bg-opacity-100 transition-opacity">
             <Trash2 className="h-4 w-4 text-red-500" />
           </button>
         </div>
-        <div className="absolute bottom-3 left-3 px-2 py-1 bg-white bg-opacity-90 rounded-lg text-xs font-medium capitalize">
+        <div className="absolute bottom-3 left-3 px-2 py-1 bg-palette-card bg-opacity-90 rounded-lg text-xs font-medium capitalize">
           {item.type}
         </div>
       </div>
@@ -43,12 +43,12 @@ export const FavoriteItem = ({ item, viewMode }: FavoriteItemProps) => {
       <div className="p-4 flex-1">
         <div className="flex items-start justify-between">
           <div>
-            <h3 className="text-lg font-semibold text-gray-900">{item.title}</h3>
-            <p className="text-sm text-gray-600 mt-1 line-clamp-2">{item.content}</p>
+            <h3 className="text-lg font-semibold text-palette-primary">{item.title}</h3>
+            <p className="text-sm text-palette-secondary mt-1 line-clamp-2">{item.content}</p>
           </div>
         </div>
         
-        <div className="mt-4 flex items-center justify-between text-sm text-gray-500">
+        <div className="mt-4 flex items-center justify-between text-sm text-palette-tertiary">
           {item.author && (
             <div className="flex items-center gap-2">
               <img
@@ -95,12 +95,12 @@ export const FavoriteItem = ({ item, viewMode }: FavoriteItemProps) => {
           )}
         </div>
         
-        <div className="mt-4 pt-4 border-t border-gray-200 flex items-center justify-between text-xs text-gray-500">
+        <div className="mt-4 pt-4 border-t border-palette-border flex items-center justify-between text-xs text-palette-tertiary">
           <div className="flex items-center gap-1">
             <Bookmark className="h-4 w-4" />
             Saved {new Date(item.savedAt).toLocaleDateString()}
           </div>
-          <button className="p-1 hover:bg-gray-100 rounded-full transition-colors">
+          <button className="p-1 hover:bg-palette-hover rounded-full transition-colors">
             <MoreHorizontal className="h-4 w-4" />
           </button>
         </div>

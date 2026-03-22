@@ -39,26 +39,26 @@ export const EventDetails = ({
 }: EventDetailsProps) => {
   return (
     <div className="mt-6 space-y-4">
-      <div className="flex items-center gap-3 text-gray-600">
-        <Calendar className="h-5 w-5 text-gray-400" />
+      <div className="flex items-center gap-3 text-palette-secondary">
+        <Calendar className="h-5 w-5 text-palette-tertiary" />
         <div>
           <div>{formatDate(date)}</div>
-          <div className="text-sm text-gray-500">
+          <div className="text-sm text-palette-tertiary">
             {formatTime(date)} - {formatTime(endDate)}
           </div>
         </div>
       </div>
       
-      <div className="flex items-center gap-3 text-gray-600">
-        <MapPin className="h-5 w-5 text-gray-400" />
+      <div className="flex items-center gap-3 text-palette-secondary">
+        <MapPin className="h-5 w-5 text-palette-tertiary" />
         <div>
           <div>{location}</div>
-          <div className="text-sm text-gray-500">{address}</div>
+          <div className="text-sm text-palette-tertiary">{address}</div>
         </div>
       </div>
       
-      <div className="flex items-center gap-3 text-gray-600">
-        <Users className="h-5 w-5 text-gray-400" />
+      <div className="flex items-center gap-3 text-palette-secondary">
+        <Users className="h-5 w-5 text-palette-tertiary" />
         <div>
           <div>{attendees} attending • {interested} interested</div>
         </div>
@@ -72,8 +72,8 @@ export const EventDetails = ({
         <button 
           className={`px-6 py-3 rounded-lg transition-colors flex items-center justify-center gap-2 ${
             isReminded
-              ? 'bg-gray-100 text-gray-700'
-              : 'bg-white border border-gray-200 text-gray-700 hover:bg-gray-50'
+              ? 'bg-palette-bg text-palette-primary'
+              : 'bg-palette-card border border-palette-border text-palette-primary hover:bg-palette-hover'
           }`}
           onClick={() => onReminderChange(!isReminded)}
         >

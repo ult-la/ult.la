@@ -21,16 +21,16 @@ const Events = () => {
 
   return (
     <div className="max-w-5xl mx-auto px-4">
-      <div className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
-        <div className="p-6 border-b border-gray-200">
+      <div className="bg-palette-card rounded-xl shadow-sm border border-palette-border overflow-hidden">
+        <div className="p-6 border-b border-palette-border">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
             <div className="flex items-center gap-3">
               <div className="h-10 w-10 bg-blue-100 rounded-full flex items-center justify-center">
                 <Calendar className="h-5 w-5 text-blue-600" />
               </div>
               <div>
-                <h1 className="text-xl font-semibold text-gray-900">Events</h1>
-                <p className="text-sm text-gray-500">
+                <h1 className="text-xl font-semibold text-palette-primary">Events</h1>
+                <p className="text-sm text-palette-tertiary">
                   Discover upcoming events near you
                 </p>
               </div>
@@ -38,16 +38,16 @@ const Events = () => {
 
             <div className="flex flex-col sm:flex-row gap-3">
               <div className="relative">
-                <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-400" />
+                <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-palette-tertiary" />
                 <input
                   type="text"
                   placeholder="Search events..."
-                  className="pl-9 pr-4 py-2 border border-gray-300 rounded-lg text-sm w-full"
+                  className="pl-9 pr-4 py-2 border border-palette-border rounded-lg text-sm w-full"
                 />
               </div>
 
               <div className="flex gap-2">
-                <select className="px-3 py-2 bg-white border border-gray-300 rounded-lg text-sm">
+                <select className="px-3 py-2 bg-palette-card border border-palette-border rounded-lg text-sm">
                   <option>All Categories</option>
                   <option>Design</option>
                   <option>Technology</option>
@@ -55,7 +55,7 @@ const Events = () => {
                   <option>Photography</option>
                 </select>
 
-                <button className="p-2 text-gray-500 hover:text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">
+                <button className="p-2 text-palette-tertiary hover:text-palette-primary hover:bg-palette-bg rounded-lg transition-colors">
                   <Filter className="h-5 w-5" />
                 </button>
               </div>

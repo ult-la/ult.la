@@ -16,19 +16,19 @@ const Saved = () => {
 
   return (
     <div className="max-w-7xl mx-auto px-4">
-      <div className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+      <div className="bg-palette-card rounded-xl shadow-sm border border-palette-border overflow-hidden">
         {/* Header */}
-        <div className="p-6 border-b border-gray-200">
+        <div className="p-6 border-b border-palette-border">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
             <div className="flex items-center gap-3">
               <div className="h-10 w-10 bg-blue-100 rounded-full flex items-center justify-center">
                 <Bookmark className="h-5 w-5 text-blue-600" />
               </div>
               <div>
-                <h1 className="text-xl font-semibold text-gray-900">
+                <h1 className="text-xl font-semibold text-palette-primary">
                   Saved Items
                 </h1>
-                <p className="text-sm text-gray-500">
+                <p className="text-sm text-palette-tertiary">
                   {filteredItems.length} items saved
                 </p>
               </div>
@@ -36,12 +36,12 @@ const Saved = () => {
 
             <div className="flex items-center gap-3">
               {/* View Toggle */}
-              <div className="flex bg-gray-100 rounded-lg p-1">
+              <div className="flex bg-palette-bg rounded-lg p-1">
                 <button
                   className={`p-2 rounded-lg transition-colors ${
                     viewMode === "grid"
-                      ? "bg-white shadow-sm"
-                      : "text-gray-500 hover:text-gray-700"
+                      ? "bg-palette-card shadow-sm"
+                      : "text-palette-tertiary hover:text-palette-primary"
                   }`}
                   onClick={() => setViewMode("grid")}
                 >
@@ -50,8 +50,8 @@ const Saved = () => {
                 <button
                   className={`p-2 rounded-lg transition-colors ${
                     viewMode === "list"
-                      ? "bg-white shadow-sm"
-                      : "text-gray-500 hover:text-gray-700"
+                      ? "bg-palette-card shadow-sm"
+                      : "text-palette-tertiary hover:text-palette-primary"
                   }`}
                   onClick={() => setViewMode("list")}
                 >
@@ -62,7 +62,7 @@ const Saved = () => {
               {/* Filter Dropdown */}
               <div className="relative">
                 <select
-                  className="pl-9 pr-4 py-2 bg-white border border-gray-300 rounded-lg text-sm appearance-none focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                  className="pl-9 pr-4 py-2 bg-palette-card border border-palette-border rounded-lg text-sm appearance-none focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                   value={selectedType}
                   onChange={(e) => setSelectedType(e.target.value)}
                 >
@@ -72,7 +72,7 @@ const Saved = () => {
                   <option value="event">Events</option>
                   <option value="photo">Photos</option>
                 </select>
-                <Filter className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-400" />
+                <Filter className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-palette-tertiary" />
               </div>
             </div>
           </div>

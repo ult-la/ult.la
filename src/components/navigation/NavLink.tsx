@@ -21,7 +21,7 @@ export const NavLink: React.FC<NavLinkProps> = ({
     return (
       <Link
         href={href}
-        className="flex items-center px-4 py-3 text-base font-medium text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-xl transition-all duration-200 ease-in-out border-b-2 border-transparent"
+        className="flex items-center px-4 py-3 text-base font-medium text-palette-secondary hover:text-blue-600 hover:bg-blue-50 rounded-xl transition-all duration-200 ease-in-out border-b-2 border-transparent"
         activeClassName="text-blue-600 border-blue-600 font-semibold border-blue-500 border-b"
       >
         <Icon className="h-5 w-5 mr-3" />
@@ -38,7 +38,7 @@ export const NavLink: React.FC<NavLinkProps> = ({
   return (
     <Link
       href={href}
-      className="px-4 mt-1 gap-1 text-gray-600 hover:text-blue-600  rounded-xl transition-all duration-200 ease-in-out flex flex-col items-center justify-center relative group border-b-2 border-transparent"
+      className="px-4 mt-1 gap-1 text-palette-secondary hover:text-blue-600  rounded-xl transition-all duration-200 ease-in-out flex flex-col items-center justify-center relative group border-b-2 border-transparent"
       activeClassName=" text-blue-600 font-semibold  "
     >
       <div className="relative">

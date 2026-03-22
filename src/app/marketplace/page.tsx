@@ -17,45 +17,45 @@ const Marketplace = () => {
 
   return (
     <div className="max-w-7xl mx-auto px-4">
-      <div className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+      <div className="bg-palette-card rounded-xl shadow-sm border border-palette-border overflow-hidden">
         {/* Header */}
-        <div className="p-6 border-b border-gray-200">
+        <div className="p-6 border-b border-palette-border">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-            <h1 className="text-2xl font-semibold text-gray-900">
+            <h1 className="text-2xl font-semibold text-palette-primary">
               Marketplace
             </h1>
 
             <div className="flex flex-col sm:flex-row gap-3">
               <div className="relative">
-                <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-400" />
+                <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-palette-tertiary" />
                 <input
                   type="text"
                   placeholder="Search items..."
-                  className="pl-9 pr-4 py-2 border border-gray-300 rounded-lg text-sm w-full"
+                  className="pl-9 pr-4 py-2 border border-palette-border rounded-lg text-sm w-full"
                 />
               </div>
 
               <div className="flex gap-2">
-                <button className="px-3 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors flex items-center gap-2">
+                <button className="px-3 py-2 bg-palette-bg text-palette-primary rounded-lg hover:bg-palette-hover transition-colors flex items-center gap-2">
                   <Filter className="h-4 w-4" />
                   <span className="text-sm font-medium">Filters</span>
                 </button>
-                <div className="flex border border-gray-200 rounded-lg">
+                <div className="flex border border-palette-border rounded-lg">
                   <button
                     className={`p-2 ${
-                      viewMode === "grid" ? "bg-gray-100" : "hover:bg-gray-50"
+                      viewMode === "grid" ? "bg-palette-bg" : "hover:bg-palette-hover"
                     } rounded-l-lg transition-colors`}
                     onClick={() => setViewMode("grid")}
                   >
-                    <Grid className="h-5 w-5 text-gray-500" />
+                    <Grid className="h-5 w-5 text-palette-tertiary" />
                   </button>
                   <button
                     className={`p-2 ${
-                      viewMode === "list" ? "bg-gray-100" : "hover:bg-gray-50"
+                      viewMode === "list" ? "bg-palette-bg" : "hover:bg-palette-hover"
                     } rounded-r-lg transition-colors`}
                     onClick={() => setViewMode("list")}
                   >
-                    <List className="h-5 w-5 text-gray-500" />
+                    <List className="h-5 w-5 text-palette-tertiary" />
                   </button>
                 </div>
               </div>

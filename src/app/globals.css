@@ -3,11 +3,52 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-rgb: 255, 255, 255;
+  /* Background */
+  --color-bg: #f3f4f6;
+  --color-bg-secondary: #f9fafb;
+  --color-bg-tertiary: #e5e7eb;
+  --color-card: #ffffff;
+  --color-hover: #f3f4f6;
+
+  /* Text */
+  --color-text-primary: #111827;
+  --color-text-secondary: #6b7280;
+  --color-text-tertiary: #9ca3af;
+
+  /* Border */
+  --color-border: #e5e7eb;
+  --color-border-light: #f3f4f6;
+
+  /* Accent */
+  --color-accent: #2563eb;
+  --color-accent-hover: #1d4ed8;
+  --color-accent-soft: #eff6ff;
+}
+
+.dark {
+  /* Background */
+  --color-bg: #0a0a0a;
+  --color-bg-secondary: #141414;
+  --color-bg-tertiary: #1f1f1f;
+  --color-card: #141414;
+  --color-hover: #1f1f1f;
+
+  /* Text */
+  --color-text-primary: #e5e5e5;
+  --color-text-secondary: #a3a3a3;
+  --color-text-tertiary: #737373;
+
+  /* Border */
+  --color-border: #262626;
+  --color-border-light: #1a1a1a;
+
+  /* Accent */
+  --color-accent: #e5e5e5;
+  --color-accent-hover: #ffffff;
+  --color-accent-soft: #1a1a1a;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: rgb(var(--background-rgb));
-} 
+  color: var(--color-text-primary);
+  background: var(--color-bg);
+}

@@ -16,7 +16,7 @@ const Favorites = () => {
 
   return (
     <div className="max-w-7xl mx-auto px-4">
-      <div className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+      <div className="bg-palette-card rounded-xl shadow-sm border border-palette-border overflow-hidden">
         <FavoritesHeader
           totalItems={favorites.length}
           viewMode={viewMode}

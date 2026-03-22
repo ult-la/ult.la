@@ -31,7 +31,7 @@ const Notifications = () => {
       case "mention":
         return <Star className="h-4 w-4 text-yellow-500" />;
       default:
-        return <Bell className="h-4 w-4 text-gray-500" />;
+        return <Bell className="h-4 w-4 text-palette-tertiary" />;
     }
   };
 
@@ -49,18 +49,18 @@ const Notifications = () => {
 
   return (
     <div className="max-w-3xl mx-auto px-4">
-      <div className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
-        <div className="p-6 border-b border-gray-200">
+      <div className="bg-palette-card rounded-xl shadow-sm border border-palette-border overflow-hidden">
+        <div className="p-6 border-b border-palette-border">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
               <div className="h-10 w-10 bg-blue-100 rounded-full flex items-center justify-center">
                 <Bell className="h-5 w-5 text-blue-600" />
               </div>
               <div>
-                <h1 className="text-xl font-semibold text-gray-900">
+                <h1 className="text-xl font-semibold text-palette-primary">
                   Notifications
                 </h1>
-                <p className="text-sm text-gray-500">
+                <p className="text-sm text-palette-tertiary">
                   {notifications.filter((n) => !n.read).length} unread
                   notifications
                 </p>
@@ -68,25 +68,25 @@ const Notifications = () => {
             </div>
             <div className="flex items-center gap-3">
               <select
-                className="px-3 py-2 bg-white border border-gray-300 rounded-lg text-sm"
+                className="px-3 py-2 bg-palette-card border border-palette-border rounded-lg text-sm"
                 value={filter}
                 onChange={(e) => setFilter(e.target.value as "all" | "unread")}
               >
                 <option value="all">All</option>
                 <option value="unread">Unread</option>
               </select>
-              <button className="p-2 text-gray-500 hover:text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">
+              <button className="p-2 text-palette-tertiary hover:text-palette-primary hover:bg-palette-bg rounded-lg transition-colors">
                 <Settings className="h-5 w-5" />
               </button>
             </div>
           </div>
         </div>
 
-        <div className="divide-y divide-gray-200">
+        <div className="divide-y divide-palette-border">
           {filteredNotifications.map((notification) => (
             <div
               key={notification.id}
-              className={`p-4 hover:bg-gray-50 transition-colors ${
+              className={`p-4 hover:bg-palette-hover transition-colors ${
                 !notification.read ? "bg-blue-50 hover:bg-blue-100" : ""
               }`}
             >
@@ -94,30 +94,30 @@ const Notifications = () => {
                 <img
                   src={notification.user.avatar}
                   alt={notification.user.name}
-                  className="h-12 w-12 rounded-full object-cover border border-gray-200"
+                  className="h-12 w-12 rounded-full object-cover border border-palette-border"
                 />
                 <div className="flex-1 min-w-0">
                   <div className="flex items-start justify-between gap-4">
                     <div>
                       <div className="flex items-center gap-2">
-                        <span className="font-medium text-gray-900">
+                        <span className="font-medium text-palette-primary">
                           {notification.user.name}
                         </span>
-                        <span className="text-gray-500">
+                        <span className="text-palette-tertiary">
                           {notification.content}
                         </span>
                       </div>
                       {notification.target && (
-                        <p className="mt-1 text-sm text-gray-600 line-clamp-1">
+                        <p className="mt-1 text-sm text-palette-secondary line-clamp-1">
                           "{notification.target}"
                         </p>
                       )}
                       {notification.comment && (
-                        <p className="mt-1 text-sm text-gray-600 bg-gray-50 p-2 rounded-lg">
+                        <p className="mt-1 text-sm text-palette-secondary bg-palette-hover p-2 rounded-lg">
                           {notification.comment}
                         </p>
                       )}
-                      <div className="mt-1 flex items-center gap-2 text-xs text-gray-500">
+                      <div className="mt-1 flex items-center gap-2 text-xs text-palette-tertiary">
                         {getIcon(notification.type)}
                         <span>{formatTime(notification.timestamp)}</span>
                       </div>

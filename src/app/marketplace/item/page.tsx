@@ -41,7 +41,7 @@ const MarketplaceItem = () => {
     <div className="max-w-7xl mx-auto px-4">
       <div className="mb-6">
         <Link href="/marketplace">
-          <button className="flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors">
+          <button className="flex items-center gap-2 text-palette-secondary hover:text-palette-primary transition-colors">
             <ArrowLeft className="h-5 w-5" />
             Back to Marketplace
           </button>
@@ -52,22 +52,22 @@ const MarketplaceItem = () => {
         {/* Main Content */}
         <div className="lg:col-span-2">
           {/* Image Gallery */}
-          <div className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+          <div className="bg-palette-card rounded-xl shadow-sm border border-palette-border overflow-hidden">
             <div className="relative h-[500px]">
               <img
                 src={item.images[currentImageIndex]}
                 alt={item.title}
-                className="w-full h-full object-contain bg-gray-50"
+                className="w-full h-full object-contain bg-palette-hover"
               />
               <div className="absolute top-4 right-4 flex gap-2">
-                <button className="p-2 bg-white rounded-full text-gray-700 hover:bg-gray-100 transition-colors">
+                <button className="p-2 bg-palette-card rounded-full text-palette-primary hover:bg-palette-bg transition-colors">
                   <Share2 className="h-5 w-5" />
                 </button>
                 <button
                   className={`p-2 rounded-full transition-colors ${
                     saved
                       ? "bg-red-500 text-white"
-                      : "bg-white text-gray-700 hover:bg-gray-100"
+                      : "bg-palette-card text-palette-primary hover:bg-palette-bg"
                   }`}
                   onClick={() => setSaved(!saved)}
                 >
@@ -94,10 +94,10 @@ const MarketplaceItem = () => {
             <div className="p-6">
               <div className="flex items-start justify-between">
                 <div>
-                  <h1 className="text-2xl font-bold text-gray-900">
+                  <h1 className="text-2xl font-bold text-palette-primary">
                     {item.title}
                   </h1>
-                  <div className="mt-2 flex items-center gap-4 text-gray-500">
+                  <div className="mt-2 flex items-center gap-4 text-palette-tertiary">
                     <span>{item.category}</span>
                     <span>•</span>
                     <span>{item.condition}</span>
@@ -111,13 +111,13 @@ const MarketplaceItem = () => {
               </div>
 
               <div className="mt-6 space-y-4">
-                <div className="flex items-center gap-3 text-gray-600">
-                  <MapPin className="h-5 w-5 text-gray-400" />
+                <div className="flex items-center gap-3 text-palette-secondary">
+                  <MapPin className="h-5 w-5 text-palette-tertiary" />
                   <span>{item.location}</span>
                 </div>
 
-                <div className="flex items-center gap-3 text-gray-600">
-                  <Info className="h-5 w-5 text-gray-400" />
+                <div className="flex items-center gap-3 text-palette-secondary">
+                  <Info className="h-5 w-5 text-palette-tertiary" />
                   <div className="text-sm">
                     Listed {formatDate(item.listed)} • {item.views} views •{" "}
                     {item.saves} saves
@@ -128,21 +128,21 @@ const MarketplaceItem = () => {
           </div>
 
           {/* Description */}
-          <div className="mt-6 bg-white rounded-xl shadow-sm border border-gray-200 p-6">
-            <h2 className="text-xl font-semibold text-gray-900 mb-4">
+          <div className="mt-6 bg-palette-card rounded-xl shadow-sm border border-palette-border p-6">
+            <h2 className="text-xl font-semibold text-palette-primary mb-4">
               Description
             </h2>
-            <p className="text-gray-600 whitespace-pre-line">
+            <p className="text-palette-secondary whitespace-pre-line">
               {item.description}
             </p>
 
             <div className="mt-6">
-              <h3 className="font-semibold text-gray-900 mb-2">Tags</h3>
+              <h3 className="font-semibold text-palette-primary mb-2">Tags</h3>
               <div className="flex flex-wrap gap-2">
                 {item.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm"
+                    className="px-3 py-1 bg-palette-bg text-palette-primary rounded-full text-sm"
                   >
                     #{tag}
                   </span>
@@ -152,15 +152,15 @@ const MarketplaceItem = () => {
           </div>
 
           {/* Related Items */}
-          <div className="mt-6 bg-white rounded-xl shadow-sm border border-gray-200 p-6">
-            <h2 className="text-xl font-semibold text-gray-900 mb-4">
+          <div className="mt-6 bg-palette-card rounded-xl shadow-sm border border-palette-border p-6">
+            <h2 className="text-xl font-semibold text-palette-primary mb-4">
               Similar Items
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {item.relatedItems.map((relatedItem) => (
                 <div
                   key={relatedItem.id}
-                  className="flex gap-4 p-3 rounded-lg hover:bg-gray-50 transition-colors"
+                  className="flex gap-4 p-3 rounded-lg hover:bg-palette-hover transition-colors"
                 >
                   <img
                     src={relatedItem.image}
@@ -168,13 +168,13 @@ const MarketplaceItem = () => {
                     className="h-20 w-20 object-cover rounded-lg"
                   />
                   <div>
-                    <h3 className="font-medium text-gray-900">
+                    <h3 className="font-medium text-palette-primary">
                       {relatedItem.title}
                     </h3>
                     <div className="text-lg font-semibold text-blue-600 mt-1">
                       {formatPrice(relatedItem.price)}
                     </div>
-                    <div className="text-sm text-gray-500 mt-1">
+                    <div className="text-sm text-palette-tertiary mt-1">
                       {relatedItem.location}
                     </div>
                   </div>
@@ -187,7 +187,7 @@ const MarketplaceItem = () => {
         {/* Sidebar */}
         <div className="space-y-6">
           {/* Seller Card */}
-          <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+          <div className="bg-palette-card rounded-xl shadow-sm border border-palette-border p-6">
             <div className="flex items-start gap-4">
               <img
                 src={item.seller.avatar}
@@ -196,7 +196,7 @@ const MarketplaceItem = () => {
               />
               <div className="flex-1">
                 <div className="flex items-center gap-2">
-                  <h3 className="font-semibold text-gray-900">
+                  <h3 className="font-semibold text-palette-primary">
                     {item.seller.name}
                   </h3>
                   {item.seller.verified && (
@@ -208,11 +208,11 @@ const MarketplaceItem = () => {
                 <div className="mt-1 flex items-center gap-1 text-sm">
                   <Star className="h-4 w-4 text-yellow-400 fill-current" />
                   <span className="font-medium">{item.seller.rating}</span>
-                  <span className="text-gray-500">
+                  <span className="text-palette-tertiary">
                     ({item.seller.reviews} reviews)
                   </span>
                 </div>
-                <div className="mt-2 text-sm text-gray-500">
+                <div className="mt-2 text-sm text-palette-tertiary">
                   <div>Member since {item.seller.memberSince}</div>
                   <div>{item.seller.listings} active listings</div>
                 </div>
@@ -225,35 +225,35 @@ const MarketplaceItem = () => {
           </div>
 
           {/* Safety Tips */}
-          <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
-            <div className="flex items-center gap-2 text-gray-900 font-semibold mb-4">
+          <div className="bg-palette-card rounded-xl shadow-sm border border-palette-border p-6">
+            <div className="flex items-center gap-2 text-palette-primary font-semibold mb-4">
               <Shield className="h-5 w-5 text-blue-600" />
               Safety Tips
             </div>
-            <div className="space-y-3 text-sm text-gray-600">
+            <div className="space-y-3 text-sm text-palette-secondary">
               <div className="flex items-start gap-2">
-                <AlertCircle className="h-4 w-4 text-gray-400 mt-0.5" />
+                <AlertCircle className="h-4 w-4 text-palette-tertiary mt-0.5" />
                 Meet in a safe, public place
               </div>
               <div className="flex items-start gap-2">
-                <AlertCircle className="h-4 w-4 text-gray-400 mt-0.5" />
+                <AlertCircle className="h-4 w-4 text-palette-tertiary mt-0.5" />
                 Don't pay in advance
               </div>
               <div className="flex items-start gap-2">
-                <AlertCircle className="h-4 w-4 text-gray-400 mt-0.5" />
+                <AlertCircle className="h-4 w-4 text-palette-tertiary mt-0.5" />
                 Check the item before buying
               </div>
             </div>
           </div>
 
           {/* Quick Actions */}
-          <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+          <div className="bg-palette-card rounded-xl shadow-sm border border-palette-border p-6">
             <div className="space-y-3">
-              <button className="w-full px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors flex items-center justify-between">
+              <button className="w-full px-4 py-2 bg-palette-bg text-palette-primary rounded-lg hover:bg-palette-hover transition-colors flex items-center justify-between">
                 <span>Report Listing</span>
                 <ChevronRight className="h-5 w-5" />
               </button>
-              <button className="w-full px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors flex items-center justify-between">
+              <button className="w-full px-4 py-2 bg-palette-bg text-palette-primary rounded-lg hover:bg-palette-hover transition-colors flex items-center justify-between">
                 <span>Share Listing</span>
                 <ChevronRight className="h-5 w-5" />
               </button>

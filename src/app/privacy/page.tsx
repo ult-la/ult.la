@@ -3,14 +3,14 @@ import React from "react";
 export default function PrivacyPolicy() {
   return (
     <div className="max-w-4xl mx-auto">
-      <div className="bg-white shadow rounded-lg p-8">
-        <h1 className="text-3xl font-bold text-gray-900 mb-8">
+      <div className="bg-palette-card shadow rounded-lg p-8">
+        <h1 className="text-3xl font-bold text-palette-primary mb-8">
           Privacy Policy
         </h1>
 
-        <div className="space-y-6 text-gray-600">
+        <div className="space-y-6 text-palette-secondary">
           <section>
-            <h2 className="text-xl font-semibold text-gray-900 mb-4">
+            <h2 className="text-xl font-semibold text-palette-primary mb-4">
               1. Information We Collect
             </h2>
             <p className="mb-4">
@@ -26,7 +26,7 @@ export default function PrivacyPolicy() {
           </section>
 
           <section>
-            <h2 className="text-xl font-semibold text-gray-900 mb-4">
+            <h2 className="text-xl font-semibold text-palette-primary mb-4">
               2. How We Use Your Information
             </h2>
             <p className="mb-4">We use the information we collect to:</p>
@@ -39,7 +39,7 @@ export default function PrivacyPolicy() {
           </section>
 
           <section>
-            <h2 className="text-xl font-semibold text-gray-900 mb-4">
+            <h2 className="text-xl font-semibold text-palette-primary mb-4">
               3. Information Sharing
             </h2>
             <p className="mb-4">
@@ -54,7 +54,7 @@ export default function PrivacyPolicy() {
           </section>
 
           <section>
-            <h2 className="text-xl font-semibold text-gray-900 mb-4">
+            <h2 className="text-xl font-semibold text-palette-primary mb-4">
               4. Your Rights
             </h2>
             <p className="mb-4">You have the right to:</p>
@@ -67,7 +67,7 @@ export default function PrivacyPolicy() {
           </section>
 
           <section>
-            <h2 className="text-xl font-semibold text-gray-900 mb-4">
+            <h2 className="text-xl font-semibold text-palette-primary mb-4">
               5. Data Security
             </h2>
             <p>
@@ -78,7 +78,7 @@ export default function PrivacyPolicy() {
           </section>
 
           <section>
-            <h2 className="text-xl font-semibold text-gray-900 mb-4">
+            <h2 className="text-xl font-semibold text-palette-primary mb-4">
               6. Contact Us
             </h2>
             <p>
@@ -88,7 +88,7 @@ export default function PrivacyPolicy() {
           </section>
 
           <section>
-            <h2 className="text-xl font-semibold text-gray-900 mb-4">
+            <h2 className="text-xl font-semibold text-palette-primary mb-4">
               7. Updates to This Policy
             </h2>
             <p>
@@ -98,8 +98,8 @@ export default function PrivacyPolicy() {
             </p>
           </section>
 
-          <div className="mt-8 pt-6 border-t border-gray-200">
-            <p className="text-sm text-gray-500">
+          <div className="mt-8 pt-6 border-t border-palette-border">
+            <p className="text-sm text-palette-tertiary">
               Last Updated: {new Date().toLocaleDateString()}
             </p>
           </div>

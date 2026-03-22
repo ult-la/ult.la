@@ -31,17 +31,17 @@ const Messages = () => {
 
   return (
     <div className="max-w-6xl mx-auto px-4">
-      <div className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden h-[calc(100vh-8rem)]">
+      <div className="bg-palette-card rounded-xl shadow-sm border border-palette-border overflow-hidden h-[calc(100vh-8rem)]">
         <div className="flex h-full">
           {/* Conversations List */}
-          <div className="w-full sm:w-80 border-r border-gray-200 flex flex-col">
-            <div className="p-4 border-b border-gray-200">
+          <div className="w-full sm:w-80 border-r border-palette-border flex flex-col">
+            <div className="p-4 border-b border-palette-border">
               <div className="relative">
-                <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-400" />
+                <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-palette-tertiary" />
                 <input
                   type="text"
                   placeholder="Search messages..."
-                  className="w-full pl-9 pr-4 py-2 bg-gray-100 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full pl-9 pr-4 py-2 bg-palette-bg rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
               </div>
             </div>
@@ -50,7 +50,7 @@ const Messages = () => {
               {conversations.map((conversation) => (
                 <button
                   key={conversation.id}
-                  className={`w-full p-4 flex items-start gap-3 hover:bg-gray-50 transition-colors ${
+                  className={`w-full p-4 flex items-start gap-3 hover:bg-palette-hover transition-colors ${
                     selectedChat === conversation.id ? "bg-blue-50" : ""
                   }`}
                   onClick={() => setSelectedChat(conversation.id)}
@@ -68,14 +68,14 @@ const Messages = () => {
 
                   <div className="flex-1 min-w-0">
                     <div className="flex justify-between items-baseline">
-                      <h3 className="font-medium text-gray-900 truncate">
+                      <h3 className="font-medium text-palette-primary truncate">
                         {conversation.user.name}
                       </h3>
-                      <span className="text-xs text-gray-500">
+                      <span className="text-xs text-palette-tertiary">
                         {conversation.lastMessage.timestamp}
                       </span>
                     </div>
-                    <p className="text-sm text-gray-500 truncate">
+                    <p className="text-sm text-palette-tertiary truncate">
                       {conversation.lastMessage.content}
                     </p>
                   </div>
@@ -92,7 +92,7 @@ const Messages = () => {
           {selectedConversation ? (
             <div className="hidden sm:flex flex-1 flex-col">
               {/* Chat Header */}
-              <div className="p-4 border-b border-gray-200 flex items-center justify-between">
+              <div className="p-4 border-b border-palette-border flex items-center justify-between">
                 <div className="flex items-center gap-3">
                   <div className="relative">
                     <img
@@ -105,10 +105,10 @@ const Messages = () => {
                     )}
                   </div>
                   <div>
-                    <h2 className="font-medium text-gray-900">
+                    <h2 className="font-medium text-palette-primary">
                       {selectedConversation.user.name}
                     </h2>
-                    <p className="text-xs text-gray-500">
+                    <p className="text-xs text-palette-tertiary">
                       {selectedConversation.user.online
                         ? "Online"
                         : `Last seen ${selectedConversation.user.lastSeen}`}
@@ -117,16 +117,16 @@ const Messages = () => {
                 </div>
 
                 <div className="flex items-center gap-3">
-                  <button className="p-2 text-gray-500 hover:bg-gray-100 rounded-full transition-colors">
+                  <button className="p-2 text-palette-tertiary hover:bg-palette-bg rounded-full transition-colors">
                     <Phone className="h-5 w-5" />
                   </button>
-                  <button className="p-2 text-gray-500 hover:bg-gray-100 rounded-full transition-colors">
+                  <button className="p-2 text-palette-tertiary hover:bg-palette-bg rounded-full transition-colors">
                     <Video className="h-5 w-5" />
                   </button>
-                  <button className="p-2 text-gray-500 hover:bg-gray-100 rounded-full transition-colors">
+                  <button className="p-2 text-palette-tertiary hover:bg-palette-bg rounded-full transition-colors">
                     <Info className="h-5 w-5" />
                   </button>
-                  <button className="p-2 text-gray-500 hover:bg-gray-100 rounded-full transition-colors">
+                  <button className="p-2 text-palette-tertiary hover:bg-palette-bg rounded-full transition-colors">
                     <MoreVertical className="h-5 w-5" />
                   </button>
                 </div>
@@ -145,7 +145,7 @@ const Messages = () => {
                       className={`max-w-[70%] rounded-2xl px-4 py-2 ${
                         message.sender === "me"
                           ? "bg-blue-600 text-white"
-                          : "bg-gray-100 text-gray-900"
+                          : "bg-palette-bg text-palette-primary"
                       }`}
                     >
                       <p>{message.content}</p>
@@ -153,7 +153,7 @@ const Messages = () => {
                         className={`text-xs mt-1 ${
                           message.sender === "me"
                             ? "text-blue-100"
-                            : "text-gray-500"
+                            : "text-palette-tertiary"
                         }`}
                       >
                         {message.timestamp}
@@ -164,14 +164,14 @@ const Messages = () => {
               </div>
 
               {/* Message Input */}
-              <div className="p-4 border-t border-gray-200">
+              <div className="p-4 border-t border-palette-border">
                 <form
                   onSubmit={handleSendMessage}
                   className="flex items-end gap-2"
                 >
                   <button
                     type="button"
-                    className="p-2 text-gray-500 hover:bg-gray-100 rounded-full transition-colors"
+                    className="p-2 text-palette-tertiary hover:bg-palette-bg rounded-full transition-colors"
                   >
                     <Paperclip className="h-5 w-5" />
                   </button>
@@ -179,26 +179,26 @@ const Messages = () => {
                     <textarea
                       rows={1}
                       placeholder="Type a message..."
-                      className="w-full px-4 py-2 bg-gray-100 rounded-2xl pr-24 resize-none focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      className="w-full px-4 py-2 bg-palette-bg rounded-2xl pr-24 resize-none focus:outline-none focus:ring-2 focus:ring-blue-500"
                       value={messageInput}
                       onChange={(e) => setMessageInput(e.target.value)}
                     />
                     <div className="absolute right-2 bottom-2 flex items-center gap-1">
                       <button
                         type="button"
-                        className="p-1 text-gray-500 hover:bg-gray-200 rounded-full transition-colors"
+                        className="p-1 text-palette-tertiary hover:bg-palette-hover rounded-full transition-colors"
                       >
                         <Image className="h-5 w-5" />
                       </button>
                       <button
                         type="button"
-                        className="p-1 text-gray-500 hover:bg-gray-200 rounded-full transition-colors"
+                        className="p-1 text-palette-tertiary hover:bg-palette-hover rounded-full transition-colors"
                       >
                         <Smile className="h-5 w-5" />
                       </button>
                       <button
                         type="button"
-                        className="p-1 text-gray-500 hover:bg-gray-200 rounded-full transition-colors"
+                        className="p-1 text-palette-tertiary hover:bg-palette-hover rounded-full transition-colors"
                       >
                         <Mic className="h-5 w-5" />
                       </button>
@@ -209,7 +209,7 @@ const Messages = () => {
                     className={`p-3 rounded-full transition-colors ${
                       messageInput.trim()
                         ? "bg-blue-600 text-white hover:bg-blue-700"
-                        : "bg-gray-100 text-gray-400 cursor-not-allowed"
+                        : "bg-palette-bg text-palette-tertiary cursor-not-allowed"
                     }`}
                     disabled={!messageInput.trim()}
                   >
@@ -221,10 +221,10 @@ const Messages = () => {
           ) : (
             <div className="hidden sm:flex flex-1 items-center justify-center">
               <div className="text-center">
-                <h3 className="text-lg font-medium text-gray-900">
+                <h3 className="text-lg font-medium text-palette-primary">
                   Select a conversation
                 </h3>
-                <p className="text-gray-500">
+                <p className="text-palette-tertiary">
                   Choose from your existing conversations
                 </p>
               </div>

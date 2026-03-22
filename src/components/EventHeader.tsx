@@ -28,7 +28,7 @@ export const EventHeader = ({
   onAttendingChange
 }: EventHeaderProps) => {
   return (
-    <div className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+    <div className="bg-palette-card rounded-xl shadow-sm border border-palette-border overflow-hidden">
       <div className="relative h-[400px]">
         <img
           src={image}
@@ -36,14 +36,14 @@ export const EventHeader = ({
           className="w-full h-full object-cover"
         />
         <div className="absolute top-4 right-4 flex gap-2">
-          <button className="p-2 bg-white rounded-full text-gray-700 hover:bg-gray-100 transition-colors">
+          <button className="p-2 bg-palette-card rounded-full text-palette-primary hover:bg-palette-hover transition-colors">
             <Share2 className="h-5 w-5" />
           </button>
           <button 
             className={`p-2 rounded-full transition-colors ${
               isAttending
                 ? 'bg-red-500 text-white'
-                : 'bg-white text-gray-700 hover:bg-gray-100'
+                : 'bg-palette-card text-palette-primary hover:bg-palette-hover'
             }`}
             onClick={() => onAttendingChange(!isAttending)}
           >
@@ -51,7 +51,7 @@ export const EventHeader = ({
           </button>
         </div>
         <div className="absolute bottom-4 left-4">
-          <span className="px-3 py-1 bg-white rounded-full text-sm font-medium">
+          <span className="px-3 py-1 bg-palette-card rounded-full text-sm font-medium">
             {category}
           </span>
         </div>
@@ -60,8 +60,8 @@ export const EventHeader = ({
       <div className="p-6">
         <div className="flex items-start justify-between">
           <div>
-            <h1 className="text-2xl font-bold text-gray-900">{title}</h1>
-            <div className="mt-2 flex items-center gap-2 text-gray-500">
+            <h1 className="text-2xl font-bold text-palette-primary">{title}</h1>
+            <div className="mt-2 flex items-center gap-2 text-palette-tertiary">
               {privacy === 'public' ? (
                 <Globe className="h-4 w-4" />
               ) : (
@@ -72,7 +72,7 @@ export const EventHeader = ({
           </div>
           <div className="text-right">
             <div className="text-2xl font-bold text-blue-600">{formatPrice(price)}</div>
-            <div className="text-sm text-gray-500">per person</div>
+            <div className="text-sm text-palette-tertiary">per person</div>
           </div>
         </div>
       </div>
