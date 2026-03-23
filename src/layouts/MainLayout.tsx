@@ -31,8 +31,8 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
 
       <div className="pt-16 pb-8">
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row">
-          {/* Left Sidebar - Hidden on mobile */}
-          <div className="hidden lg:block lg:flex-shrink-0">
+          {/* Left Sidebar - Currently hidden, items moved to profile dropdown */}
+          <div className="hidden">
             <LeftSidebar />
           </div>
 

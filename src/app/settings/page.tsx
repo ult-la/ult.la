@@ -28,7 +28,7 @@ const Settings = () => {
   ];
 
   return (
-    <div className="max-w-[1400px] mx-auto px-4">
+    <div className="max-w-7xl mx-auto px-4">
       <div className="flex flex-col md:flex-row gap-6">
         {/* Settings Menu */}
         <div className="w-full md:w-64 flex-shrink-0">

@@ -30,7 +30,7 @@ const Messages = () => {
   };
 
   return (
-    <div className="max-w-6xl mx-auto px-4">
+    <div className="max-w-7xl mx-auto px-4">
       <div className="bg-palette-card rounded-xl shadow-sm border border-palette-border overflow-hidden h-[calc(100vh-8rem)]">
         <div className="flex h-full">
           {/* Conversations List */}

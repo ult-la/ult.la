@@ -48,7 +48,7 @@ const Notifications = () => {
   };
 
   return (
-    <div className="max-w-3xl mx-auto px-4">
+    <div className="max-w-7xl mx-auto px-4">
       <div className="bg-palette-card rounded-xl shadow-sm border border-palette-border overflow-hidden">
         <div className="p-6 border-b border-palette-border">
           <div className="flex items-center justify-between">

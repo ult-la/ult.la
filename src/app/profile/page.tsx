@@ -21,7 +21,7 @@ const Profile = () => {
   const userPosts = samplePosts.filter((post) => post.user.id === "user1");
 
   return (
-    <div className="max-w-4xl mx-auto px-4 ">
+    <div className="max-w-7xl mx-auto px-4">
       {/* Cover Photo */}
       <div className="relative h-80 rounded-xl overflow-hidden mb-4">
         <img

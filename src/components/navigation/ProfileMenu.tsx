@@ -1,5 +1,5 @@
 import React from "react";
-import { User, Bookmark, Settings, LogOut, HelpCircle, Home, Users, MessageCircle, Bell } from "lucide-react";
+import { User, Bookmark, Settings, LogOut, HelpCircle, Home, Users, MessageCircle, Bell, Calendar, Clock, Heart, Star, FileText, ShoppingBag } from "lucide-react";
 import { Link } from "../ui/Link";
 
 interface ProfileMenuProps {
@@ -16,9 +16,19 @@ export const ProfileMenu: React.FC<ProfileMenuProps> = ({
     { href: "/notifications", icon: Bell, label: "Notifications" },
   ];
 
-  const menuItems = [
+  const sidebarItems = [
     { href: "/profile", icon: User, label: "Profile" },
-    { href: "/saved", icon: Bookmark, label: "Saved Items" },
+    { href: "/friend-requests", icon: Users, label: "Friends" },
+    { href: "/saved", icon: Bookmark, label: "Saved" },
+    { href: "/events", icon: Calendar, label: "Events" },
+    { href: "/saved", icon: Clock, label: "Memories" },
+    { href: "/dating", icon: Heart, label: "Dating" },
+    { href: "/favorites", icon: Star, label: "Favorites" },
+    { href: "/search", icon: FileText, label: "Pages" },
+    { href: "/marketplace", icon: ShoppingBag, label: "Marketplace" },
+  ];
+
+  const menuItems = [
     { href: "/settings", icon: Settings, label: "Settings" },
     { href: "/privacy", icon: HelpCircle, label: "Help Center" },
     { href: "/logout", icon: LogOut, label: "Log out", isLogout: true },
@@ -61,6 +71,8 @@ export const ProfileMenu: React.FC<ProfileMenuProps> = ({
         <div className="mt-4 space-y-1">
           {navItems.map((item) => renderMenuItem(item, true))}
           <div className="h-px bg-palette-border my-2"></div>
+          {sidebarItems.map((item) => renderMenuItem(item, true))}
+          <div className="h-px bg-palette-border my-2"></div>
           {menuItems.slice(0, -1).map((item) => renderMenuItem(item, true))}
           <div className="h-px bg-palette-border my-2"></div>
           {renderMenuItem(menuItems[menuItems.length - 1], true)}
@@ -70,7 +82,7 @@ export const ProfileMenu: React.FC<ProfileMenuProps> = ({
   }
 
   return (
-    <div className="absolute right-0 mt-2 w-56 bg-palette-card rounded-xl shadow-lg border border-palette-border py-1.5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+    <div className="absolute right-0 mt-2 w-56 max-h-[80vh] overflow-y-auto bg-palette-card rounded-xl shadow-lg border border-palette-border py-1.5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
       <div className="px-4 py-2 border-b border-palette-border-light">
         <div className="flex items-center">
           <div className="relative">
@@ -91,6 +103,8 @@ export const ProfileMenu: React.FC<ProfileMenuProps> = ({
       </div>
       <div className="py-1">
         {navItems.map((item) => renderMenuItem(item, false))}
+        <div className="h-px bg-palette-border-light my-1"></div>
+        {sidebarItems.map((item) => renderMenuItem(item, false))}
         <div className="h-px bg-palette-border-light my-1"></div>
         {menuItems.slice(0, -1).map((item) => renderMenuItem(item, false))}
         <div className="h-px bg-palette-border-light my-1"></div>

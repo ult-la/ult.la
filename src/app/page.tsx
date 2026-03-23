@@ -14,7 +14,7 @@ const Home: React.FC = () => {
   };
 
   return (
-    <div className="max-w-4xl mx-auto px-4 w-full">
+    <div className="max-w-7xl mx-auto px-4 w-full">
       <CreatePost onCreatePost={handleCreatePost} />
       <FeedList posts={posts} />
     </div>
