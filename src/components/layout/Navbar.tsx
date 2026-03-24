@@ -1,3 +1,4 @@
+"use client";
 import React, { useState } from 'react';
 import {
   Menu,
@@ -25,7 +26,10 @@ const Navbar: React.FC = () => {
           {/* Right section */}
           <div className="flex items-center gap-2">
             <div className="relative group">
-              <button className="flex items-center gap-2 p-1.5 rounded-full hover:bg-palette-hover transition">
+              <button
+                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                className="flex items-center gap-2 p-1.5 rounded-full hover:bg-palette-hover transition"
+              >
                 <img
                   src="https://images.pexels.com/photos/1382731/pexels-photo-1382731.jpeg?auto=compress&cs=tinysrgb&w=150"
                   alt="Profile"
@@ -35,30 +39,21 @@ const Navbar: React.FC = () => {
                   <div className="w-2 h-2 rounded-full bg-green-500"></div>
                 </div>
               </button>
-              <ProfileMenu />
+              {/* Desktop: hover dropdown */}
+              <div className="hidden md:block">
+                <ProfileMenu />
+              </div>
             </div>
-
-            <button
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="md:hidden p-2 text-palette-secondary hover:text-palette-accent hover:bg-palette-hover rounded-lg transition"
-            >
-              {mobileMenuOpen ? (
-                <X className="h-6 w-6" />
-              ) : (
-                <Menu className="h-6 w-6" />
-              )}
-            </button>
           </div>
         </div>
       </div>
 
-      {/* Mobile menu */}
+      {/* Mobile menu - fullscreen overlay */}
       {mobileMenuOpen && (
-        <div className="md:hidden border-t border-palette-border">
+        <div className="md:hidden fixed inset-0 top-16 z-40 bg-palette-card overflow-y-auto">
           <div className="px-4 py-3">
             <SearchInput isMobile />
           </div>
-
           <ProfileMenu isMobile />
         </div>
       )}
