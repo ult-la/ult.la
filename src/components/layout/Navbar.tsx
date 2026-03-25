@@ -30,13 +30,13 @@ const Navbar: React.FC = () => {
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                 className="flex items-center gap-2 p-1.5 rounded-full hover:bg-palette-hover transition"
               >
-                <img
-                  src="https://images.pexels.com/photos/1382731/pexels-photo-1382731.jpeg?auto=compress&cs=tinysrgb&w=150"
-                  alt="Profile"
-                  className="h-8 w-8 rounded-full object-cover"
-                />
-                <div className="hidden md:block">
-                  <div className="w-2 h-2 rounded-full bg-green-500"></div>
+                <div className="relative">
+                  <img
+                    src="https://images.pexels.com/photos/1382731/pexels-photo-1382731.jpeg?auto=compress&cs=tinysrgb&w=150"
+                    alt="Profile"
+                    className="h-8 w-8 rounded-full object-cover"
+                  />
+                  <div className="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-green-500 border-2 border-palette-card"></div>
                 </div>
               </button>
               {/* Desktop: hover dropdown */}
