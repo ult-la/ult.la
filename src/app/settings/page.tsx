@@ -223,7 +223,7 @@ const Settings = () => {
                   Appearance
                 </h2>
                 <div className="space-y-6">
-                  <div className="flex items-center justify-between py-3">
+                  <div className="py-3">
                     <DarkModeToggle />
                   </div>
                 </div>
