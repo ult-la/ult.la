@@ -1,6 +1,9 @@
+"use client";
+
 import React from "react";
-import { User, Bookmark, Settings, LogOut, HelpCircle, Home, Users, MessageCircle, Bell, Calendar, Clock, Heart, Star, FileText, ShoppingBag } from "lucide-react";
+import { User, Bookmark, Settings, LogOut, LogIn, HelpCircle, Home, Users, MessageCircle, Bell, Calendar, Clock, Heart, Star, FileText, ShoppingBag } from "lucide-react";
 import { Link } from "../ui/Link";
+import { useModal } from "@/contexts/ModalContext";
 
 interface ProfileMenuProps {
   isMobile?: boolean;
@@ -9,6 +12,7 @@ interface ProfileMenuProps {
 export const ProfileMenu: React.FC<ProfileMenuProps> = ({
   isMobile = false,
 }) => {
+  const { openModal } = useModal();
   const navItems = [
     { href: "/", icon: Home, label: "Home" },
     { href: "/search", icon: Users, label: "Friends" },
@@ -31,22 +35,36 @@ export const ProfileMenu: React.FC<ProfileMenuProps> = ({
   const menuItems = [
     { href: "/settings", icon: Settings, label: "Settings" },
     { href: "/privacy", icon: HelpCircle, label: "Help Center" },
-    { href: "/logout", icon: LogOut, label: "Log out", isLogout: true },
   ];
 
   const renderMenuItem = (item: (typeof menuItems)[0], isMobile: boolean) => (
     <Link
       key={item.href}
       href={item.href}
-      className={`flex items-center px-4 py-2.5 text-sm ${
-        item.isLogout
-          ? "text-red-600 hover:text-red-700 hover:bg-red-50 dark:hover:bg-red-950"
-          : "text-palette-primary hover:text-palette-accent hover:bg-palette-hover"
-      } transition-colors duration-150`}
+      className="flex items-center px-4 py-2.5 text-sm text-palette-primary hover:text-palette-accent hover:bg-palette-hover transition-colors duration-150"
     >
       <item.icon className={`${isMobile ? "h-5 w-5" : "h-4 w-4"} mr-3`} />
       {item.label}
     </Link>
+  );
+
+  const renderAuthButtons = (isMobile: boolean) => (
+    <>
+      <button
+        onClick={() => openModal("signin")}
+        className="w-full flex items-center px-4 py-2.5 text-sm text-palette-primary hover:text-palette-accent hover:bg-palette-hover transition-colors duration-150"
+      >
+        <LogIn className={`${isMobile ? "h-5 w-5" : "h-4 w-4"} mr-3`} />
+        Sign In
+      </button>
+      <button
+        onClick={() => openModal("signup")}
+        className="w-full flex items-center px-4 py-2.5 text-sm text-palette-primary hover:text-palette-accent hover:bg-palette-hover transition-colors duration-150"
+      >
+        <User className={`${isMobile ? "h-5 w-5" : "h-4 w-4"} mr-3`} />
+        Sign Up
+      </button>
+    </>
   );
 
   if (isMobile) {
@@ -73,9 +91,9 @@ export const ProfileMenu: React.FC<ProfileMenuProps> = ({
           <div className="h-px bg-palette-border my-2"></div>
           {sidebarItems.map((item) => renderMenuItem(item, true))}
           <div className="h-px bg-palette-border my-2"></div>
-          {menuItems.slice(0, -1).map((item) => renderMenuItem(item, true))}
+          {menuItems.map((item) => renderMenuItem(item, true))}
           <div className="h-px bg-palette-border my-2"></div>
-          {renderMenuItem(menuItems[menuItems.length - 1], true)}
+          {renderAuthButtons(true)}
         </div>
       </div>
     );
@@ -106,9 +124,9 @@ export const ProfileMenu: React.FC<ProfileMenuProps> = ({
         <div className="h-px bg-palette-border-light my-1"></div>
         {sidebarItems.map((item) => renderMenuItem(item, false))}
         <div className="h-px bg-palette-border-light my-1"></div>
-        {menuItems.slice(0, -1).map((item) => renderMenuItem(item, false))}
+        {menuItems.map((item) => renderMenuItem(item, false))}
         <div className="h-px bg-palette-border-light my-1"></div>
-        {renderMenuItem(menuItems[menuItems.length - 1], false)}
+        {renderAuthButtons(false)}
       </div>
     </div>
   );

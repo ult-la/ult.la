@@ -31,6 +31,11 @@
   --color-accent: #2563eb;
   --color-accent-hover: #1d4ed8;
   --color-accent-soft: #eff6ff;
+
+  /* Button */
+  --color-btn-bg: #111827;
+  --color-btn-bg-hover: #1f2937;
+  --color-btn-text: #ffffff;
 }
 
 .dark {
@@ -54,6 +59,11 @@
   --color-accent: #e5e5e5;
   --color-accent-hover: #ffffff;
   --color-accent-soft: #1a1a1a;
+
+  /* Button */
+  --color-btn-bg: #e5e5e5;
+  --color-btn-bg-hover: #ffffff;
+  --color-btn-text: #0a0a0a;
 }
 
 body {
