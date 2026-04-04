@@ -5,7 +5,7 @@ export const Filters = () => {
     <div className="bg-palette-card rounded-xl shadow-sm border border-palette-border p-6">
       <div className="flex items-center justify-between mb-4">
         <h3 className="text-lg font-semibold">Filters</h3>
-        <button className="text-blue-600 text-sm font-medium hover:underline">Reset</button>
+        <button className="text-palette-accent text-sm font-medium hover:underline">Reset</button>
       </div>
       
       <div className="space-y-4">
@@ -40,22 +40,22 @@ export const Filters = () => {
           <label className="block text-sm font-medium text-palette-primary mb-1">Looking For</label>
           <div className="space-y-2">
             <label className="flex items-center">
-              <input type="checkbox" className="rounded text-blue-600" />
+              <input type="checkbox" className="rounded text-palette-accent" />
               <span className="ml-2 text-sm text-palette-primary">Friendship</span>
             </label>
             <label className="flex items-center">
-              <input type="checkbox" className="rounded text-blue-600" />
+              <input type="checkbox" className="rounded text-palette-accent" />
               <span className="ml-2 text-sm text-palette-primary">Dating</span>
             </label>
             <label className="flex items-center">
-              <input type="checkbox" className="rounded text-blue-600" />
+              <input type="checkbox" className="rounded text-palette-accent" />
               <span className="ml-2 text-sm text-palette-primary">Long-term</span>
             </label>
           </div>
         </div>
       </div>
       
-      <button className="w-full mt-6 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center gap-2">
+      <button className="w-full mt-6 px-4 py-2 bg-palette-btn-bg text-palette-btn-text rounded-lg hover:bg-palette-btn-bg-hover transition-colors flex items-center justify-center gap-2">
         <Filter className="h-4 w-4" />
         Apply Filters
       </button>

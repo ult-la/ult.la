@@ -143,7 +143,7 @@ const Post: React.FC<PostProps> = ({ post }) => {
               />
               <input
                 type="text"
-                className="flex-1 bg-palette-bg rounded-full px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-palette-card"
+                className="flex-1 bg-palette-bg rounded-full px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-palette-border focus:bg-palette-card"
                 placeholder="Write a comment..."
                 value={newComment}
                 onChange={(e) => setNewComment(e.target.value)}

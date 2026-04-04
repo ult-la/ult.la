@@ -41,7 +41,7 @@ const Messages = () => {
                 <input
                   type="text"
                   placeholder="Search messages..."
-                  className="w-full pl-9 pr-4 py-2 bg-palette-bg rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full pl-9 pr-4 py-2 bg-palette-bg rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-palette-border"
                 />
               </div>
             </div>
@@ -51,7 +51,7 @@ const Messages = () => {
                 <button
                   key={conversation.id}
                   className={`w-full p-4 flex items-start gap-3 hover:bg-palette-hover transition-colors ${
-                    selectedChat === conversation.id ? "bg-blue-50" : ""
+                    selectedChat === conversation.id ? "bg-palette-hover" : ""
                   }`}
                   onClick={() => setSelectedChat(conversation.id)}
                 >
@@ -81,7 +81,7 @@ const Messages = () => {
                   </div>
 
                   {conversation.lastMessage.unread && (
-                    <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                    <div className="w-2 h-2 bg-palette-btn-bg rounded-full"></div>
                   )}
                 </button>
               ))}
@@ -144,7 +144,7 @@ const Messages = () => {
                     <div
                       className={`max-w-[70%] rounded-2xl px-4 py-2 ${
                         message.sender === "me"
-                          ? "bg-blue-600 text-white"
+                          ? "bg-palette-btn-bg text-palette-btn-text"
                           : "bg-palette-bg text-palette-primary"
                       }`}
                     >
@@ -152,7 +152,7 @@ const Messages = () => {
                       <p
                         className={`text-xs mt-1 ${
                           message.sender === "me"
-                            ? "text-blue-100"
+                            ? "text-palette-tertiary"
                             : "text-palette-tertiary"
                         }`}
                       >
@@ -179,7 +179,7 @@ const Messages = () => {
                     <textarea
                       rows={1}
                       placeholder="Type a message..."
-                      className="w-full px-4 py-2 bg-palette-bg rounded-2xl pr-24 resize-none focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      className="w-full px-4 py-2 bg-palette-bg rounded-2xl pr-24 resize-none focus:outline-none focus:ring-2 focus:ring-palette-border"
                       value={messageInput}
                       onChange={(e) => setMessageInput(e.target.value)}
                     />
@@ -208,7 +208,7 @@ const Messages = () => {
                     type="submit"
                     className={`p-3 rounded-full transition-colors ${
                       messageInput.trim()
-                        ? "bg-blue-600 text-white hover:bg-blue-700"
+                        ? "bg-palette-btn-bg text-palette-btn-text hover:bg-palette-btn-bg-hover"
                         : "bg-palette-bg text-palette-tertiary cursor-not-allowed"
                     }`}
                     disabled={!messageInput.trim()}

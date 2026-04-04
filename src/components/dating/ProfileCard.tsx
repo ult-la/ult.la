@@ -35,11 +35,11 @@ export const ProfileCard = ({ profile, onSwipe }: ProfileCardProps) => {
         />
         
         {/* Profile Info Overlay */}
-        <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-6 text-white">
+        <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-6 text-palette-btn-text">
           <div className="flex items-center gap-2">
             <h2 className="text-2xl font-bold">{profile.name}, {profile.age}</h2>
             {profile.verified && (
-              <div className="bg-blue-500 p-1 rounded-full">
+              <div className="bg-neutral-600 p-1 rounded-full">
                 <Star className="h-4 w-4" />
               </div>
             )}

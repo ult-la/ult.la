@@ -42,7 +42,7 @@ export const EventHeader = ({
           <button 
             className={`p-2 rounded-full transition-colors ${
               isAttending
-                ? 'bg-red-500 text-white'
+                ? 'bg-red-500 text-palette-btn-text'
                 : 'bg-palette-card text-palette-primary hover:bg-palette-hover'
             }`}
             onClick={() => onAttendingChange(!isAttending)}
@@ -71,7 +71,7 @@ export const EventHeader = ({
             </div>
           </div>
           <div className="text-right">
-            <div className="text-2xl font-bold text-blue-600">{formatPrice(price)}</div>
+            <div className="text-2xl font-bold text-palette-accent">{formatPrice(price)}</div>
             <div className="text-sm text-palette-tertiary">per person</div>
           </div>
         </div>

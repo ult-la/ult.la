@@ -9,7 +9,7 @@ export const EventAmenities = ({ amenities }: EventAmenitiesProps) => {
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         {amenities.map((amenity, index) => (
           <div key={index} className="flex items-center gap-2 text-palette-secondary">
-            <div className="h-2 w-2 bg-blue-600 rounded-full"></div>
+            <div className="h-2 w-2 bg-palette-btn-bg rounded-full"></div>
             {amenity}
           </div>
         ))}

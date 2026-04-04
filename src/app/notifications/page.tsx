@@ -23,7 +23,7 @@ const Notifications = () => {
       case "like":
         return <Heart className="h-4 w-4 text-red-500" />;
       case "friend_request":
-        return <Users className="h-4 w-4 text-blue-500" />;
+        return <Users className="h-4 w-4 text-palette-secondary" />;
       case "comment":
         return <MessageCircle className="h-4 w-4 text-green-500" />;
       case "event":
@@ -53,8 +53,8 @@ const Notifications = () => {
         <div className="p-6 border-b border-palette-border">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <div className="h-10 w-10 bg-blue-100 rounded-full flex items-center justify-center">
-                <Bell className="h-5 w-5 text-blue-600" />
+              <div className="h-10 w-10 bg-palette-bg-tertiary rounded-full flex items-center justify-center">
+                <Bell className="h-5 w-5 text-palette-accent" />
               </div>
               <div>
                 <h1 className="text-xl font-semibold text-palette-primary">
@@ -87,7 +87,7 @@ const Notifications = () => {
             <div
               key={notification.id}
               className={`p-4 hover:bg-palette-hover transition-colors ${
-                !notification.read ? "bg-blue-50 hover:bg-blue-100" : ""
+                !notification.read ? "bg-palette-hover hover:bg-palette-bg-tertiary" : ""
               }`}
             >
               <div className="flex items-start gap-4">
@@ -123,7 +123,7 @@ const Notifications = () => {
                       </div>
                     </div>
                     {!notification.read && (
-                      <div className="h-2 w-2 rounded-full bg-blue-600 flex-shrink-0"></div>
+                      <div className="h-2 w-2 rounded-full bg-palette-btn-bg flex-shrink-0"></div>
                     )}
                   </div>
                 </div>

@@ -11,8 +11,8 @@ const FriendRequests = () => {
         <div className="p-6 border-b border-palette-border">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <div className="h-10 w-10 bg-blue-100 rounded-full flex items-center justify-center">
-                <Users className="h-5 w-5 text-blue-600" />
+              <div className="h-10 w-10 bg-palette-bg-tertiary rounded-full flex items-center justify-center">
+                <Users className="h-5 w-5 text-palette-accent" />
               </div>
               <div>
                 <h1 className="text-xl font-semibold text-palette-primary">
@@ -56,7 +56,7 @@ const FriendRequests = () => {
                       </div>
                     </div>
                     <div className="flex gap-2">
-                      <button className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors flex items-center gap-2">
+                      <button className="px-4 py-2 bg-palette-btn-bg text-palette-btn-text rounded-lg hover:bg-palette-btn-bg-hover transition-colors flex items-center gap-2">
                         <Check className="h-4 w-4" />
                         Accept
                       </button>

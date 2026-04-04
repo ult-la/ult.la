@@ -21,8 +21,8 @@ export const FavoritesHeader = ({
     <div className="p-6 border-b border-palette-border">
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div className="flex items-center gap-3">
-          <div className="h-10 w-10 bg-blue-100 rounded-full flex items-center justify-center">
-            <Star className="h-5 w-5 text-blue-600" />
+          <div className="h-10 w-10 bg-palette-bg-tertiary rounded-full flex items-center justify-center">
+            <Star className="h-5 w-5 text-palette-accent" />
           </div>
           <div>
             <h1 className="text-xl font-semibold text-palette-primary">Favorites</h1>
@@ -70,7 +70,7 @@ export const FavoritesHeader = ({
             key={category.id}
             className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
               selectedCategory === category.id
-                ? 'bg-blue-600 text-white'
+                ? 'bg-palette-btn-bg text-palette-btn-text'
                 : 'bg-palette-bg text-palette-primary hover:bg-palette-hover'
             }`}
             onClick={() => onCategoryChange(category.id)}

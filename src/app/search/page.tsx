@@ -72,7 +72,7 @@ const SearchResults = () => {
                       className={`px-4 py-2 rounded-lg transition-colors flex items-center gap-2 ${
                         person.isFriend
                           ? "bg-palette-bg text-palette-primary hover:bg-palette-hover"
-                          : "bg-blue-600 text-white hover:bg-blue-700"
+                          : "bg-palette-btn-bg text-palette-btn-text hover:bg-palette-btn-bg-hover"
                       }`}
                     >
                       {person.isFriend ? (

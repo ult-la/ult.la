@@ -30,8 +30,8 @@ const LeftSidebar = () => {
       label: 'Tech Enthusiasts',
       href: '/groups',
       shortcutIcon: <span className="text-xs font-medium">T</span>,
-      shortcutBgColor: 'bg-blue-100',
-      shortcutTextColor: 'text-blue-600'
+      shortcutBgColor: 'bg-palette-bg-tertiary',
+      shortcutTextColor: 'text-palette-accent'
     },
     {
       label: 'Design Community',

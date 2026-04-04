@@ -45,8 +45,8 @@ const Groups = () => {
         <div className="p-6 border-b border-palette-border">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
             <div className="flex items-center gap-3">
-              <div className="h-10 w-10 bg-blue-100 rounded-full flex items-center justify-center">
-                <Users className="h-5 w-5 text-blue-600" />
+              <div className="h-10 w-10 bg-palette-bg-tertiary rounded-full flex items-center justify-center">
+                <Users className="h-5 w-5 text-palette-accent" />
               </div>
               <div>
                 <h1 className="text-xl font-semibold text-palette-primary">Groups</h1>
@@ -66,7 +66,7 @@ const Groups = () => {
                 />
               </div>
 
-              <button className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors flex items-center gap-2">
+              <button className="px-4 py-2 bg-palette-btn-bg text-palette-btn-text rounded-lg hover:bg-palette-btn-bg-hover transition-colors flex items-center gap-2">
                 <Plus className="h-4 w-4" />
                 Create Group
               </button>
@@ -78,7 +78,7 @@ const Groups = () => {
             <button
               className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
                 viewMode === "discover"
-                  ? "bg-blue-600 text-white"
+                  ? "bg-palette-btn-bg text-palette-btn-text"
                   : "bg-palette-bg text-palette-primary hover:bg-palette-hover"
               }`}
               onClick={() => setViewMode("discover")}
@@ -88,7 +88,7 @@ const Groups = () => {
             <button
               className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
                 viewMode === "my-groups"
-                  ? "bg-blue-600 text-white"
+                  ? "bg-palette-btn-bg text-palette-btn-text"
                   : "bg-palette-bg text-palette-primary hover:bg-palette-hover"
               }`}
               onClick={() => setViewMode("my-groups")}
@@ -104,7 +104,7 @@ const Groups = () => {
                   key={category.id}
                   className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
                     selectedCategory === category.id
-                      ? "bg-blue-600 text-white"
+                      ? "bg-palette-btn-bg text-palette-btn-text"
                       : "bg-palette-bg text-palette-primary hover:bg-palette-hover"
                   }`}
                   onClick={() => setSelectedCategory(category.id)}
@@ -149,7 +149,7 @@ const Groups = () => {
                       <Settings className="h-5 w-5" />
                     </button>
                   ) : (
-                    <button className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors text-sm font-medium">
+                    <button className="px-4 py-2 bg-palette-btn-bg text-palette-btn-text rounded-lg hover:bg-palette-btn-bg-hover transition-colors text-sm font-medium">
                       Join
                     </button>
                   )}

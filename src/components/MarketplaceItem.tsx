@@ -32,7 +32,7 @@ export const MarketplaceItem = ({ item, viewMode }: MarketplaceItemProps) => {
           <button 
             className={`absolute top-3 right-3 p-2 rounded-full ${
               item.saved 
-                ? 'bg-red-500 text-white' 
+                ? 'bg-red-500 text-palette-btn-text' 
                 : 'bg-palette-card bg-opacity-90 text-palette-primary'
             }`}
           >
@@ -44,9 +44,9 @@ export const MarketplaceItem = ({ item, viewMode }: MarketplaceItemProps) => {
           <div className="flex items-start justify-between">
             <div>
               <h3 className="text-lg font-semibold text-palette-primary">{item.title}</h3>
-              <p className="text-2xl font-bold text-blue-600 mt-1">{formatPrice(item.price)}</p>
+              <p className="text-2xl font-bold text-palette-accent mt-1">{formatPrice(item.price)}</p>
             </div>
-            <span className="px-2 py-1 bg-blue-100 text-blue-800 text-xs font-medium rounded">
+            <span className="px-2 py-1 bg-palette-bg-tertiary text-palette-primary text-xs font-medium rounded">
               {item.condition}
             </span>
           </div>
@@ -71,7 +71,7 @@ export const MarketplaceItem = ({ item, viewMode }: MarketplaceItemProps) => {
               </div>
             </div>
             
-            <button className="flex items-center gap-1 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors text-sm font-medium">
+            <button className="flex items-center gap-1 px-4 py-2 bg-palette-btn-bg text-palette-btn-text rounded-lg hover:bg-palette-btn-bg-hover transition-colors text-sm font-medium">
               <MessageCircle className="h-4 w-4" />
               Contact
             </button>

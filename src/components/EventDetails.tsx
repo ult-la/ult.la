@@ -65,7 +65,7 @@ export const EventDetails = ({
       </div>
 
       <div className="mt-6 flex gap-3">
-        <button className="flex-1 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center gap-2">
+        <button className="flex-1 px-6 py-3 bg-palette-btn-bg text-palette-btn-text rounded-lg hover:bg-palette-btn-bg-hover transition-colors flex items-center justify-center gap-2">
           <Ticket className="h-5 w-5" />
           Get Tickets
         </button>

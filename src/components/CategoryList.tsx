@@ -14,7 +14,7 @@ export const CategoryList = ({ categories, selectedCategory, onCategorySelect }:
           key={category.id}
           className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
             selectedCategory === category.id
-              ? 'bg-blue-600 text-white'
+              ? 'bg-palette-btn-bg text-palette-btn-text'
               : 'bg-palette-bg text-palette-primary hover:bg-palette-hover'
           }`}
           onClick={() => onCategorySelect(category.id)}

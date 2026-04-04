@@ -75,7 +75,7 @@ export const ProfileMenu: React.FC<ProfileMenuProps> = ({
             <img
               src="https://images.pexels.com/photos/1382731/pexels-photo-1382731.jpeg?auto=compress&cs=tinysrgb&w=150"
               alt="Profile"
-              className="h-10 w-10 rounded-full object-cover ring-2 ring-blue-500"
+              className="h-10 w-10 rounded-full object-cover ring-2 ring-palette-border"
             />
             <div className="absolute bottom-0 right-0 h-3 w-3 bg-green-500 rounded-full border-2 border-palette-card"></div>
           </div>
@@ -107,7 +107,7 @@ export const ProfileMenu: React.FC<ProfileMenuProps> = ({
             <img
               src="https://images.pexels.com/photos/1382731/pexels-photo-1382731.jpeg?auto=compress&cs=tinysrgb&w=150"
               alt="Profile"
-              className="h-8 w-8 rounded-full object-cover ring-2 ring-blue-500"
+              className="h-8 w-8 rounded-full object-cover ring-2 ring-palette-border"
             />
             <div className="absolute bottom-0 right-0 h-2.5 w-2.5 bg-green-500 rounded-full border-2 border-palette-card"></div>
           </div>

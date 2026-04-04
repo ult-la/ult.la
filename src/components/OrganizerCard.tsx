@@ -25,7 +25,7 @@ export const OrganizerCard = ({ organizer }: OrganizerCardProps) => {
           <div className="flex items-center gap-2">
             <h3 className="font-semibold text-palette-primary">{organizer.name}</h3>
             {organizer.verified && (
-              <div className="text-blue-500">
+              <div className="text-palette-secondary">
                 <Star className="h-4 w-4 fill-current" />
               </div>
             )}

@@ -30,7 +30,7 @@ export const EventCard = ({ event }: EventCardProps) => {
         <button 
           className={`absolute top-3 right-3 p-2 rounded-full ${
             event.saved 
-              ? 'bg-blue-600 text-white' 
+              ? 'bg-palette-btn-bg text-palette-btn-text' 
               : 'bg-palette-card bg-opacity-90 text-palette-primary'
           }`}
         >
@@ -52,10 +52,10 @@ export const EventCard = ({ event }: EventCardProps) => {
         </div>
         
         <div className="mt-4 flex justify-between items-center">
-          <Link href={`/event`} className="text-blue-600 text-sm font-medium hover:underline">
+          <Link href={`/event`} className="text-palette-accent text-sm font-medium hover:underline">
             View Details
           </Link>
-          <Link href={`/event`} className="flex items-center gap-1 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors text-sm font-medium">
+          <Link href={`/event`} className="flex items-center gap-1 px-4 py-2 bg-palette-btn-bg text-palette-btn-text rounded-lg hover:bg-palette-btn-bg-hover transition-colors text-sm font-medium">
             Join Event
             <ChevronRight className="h-4 w-4" />
           </Link>

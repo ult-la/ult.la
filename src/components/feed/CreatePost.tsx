@@ -54,7 +54,7 @@ const CreatePost: React.FC<{ onCreatePost: (post: any) => void }> = ({
         />
         <input
           type="text"
-          className="ml-3 flex-1 bg-palette-bg rounded-full px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-palette-card"
+          className="ml-3 flex-1 bg-palette-bg rounded-full px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-palette-border focus:bg-palette-card"
           placeholder="What's on your mind?"
           value={content}
           onChange={(e) => {
@@ -78,7 +78,7 @@ const CreatePost: React.FC<{ onCreatePost: (post: any) => void }> = ({
               />
               <button
                 type="button"
-                className="absolute top-2 right-2 bg-gray-800 bg-opacity-70 rounded-full p-1 text-white hover:bg-opacity-100 transition-opacity"
+                className="absolute top-2 right-2 bg-gray-800 bg-opacity-70 rounded-full p-1 text-palette-btn-text hover:bg-opacity-100 transition-opacity"
                 onClick={removeImage}
               >
                 <X className="h-4 w-4" />
@@ -90,7 +90,7 @@ const CreatePost: React.FC<{ onCreatePost: (post: any) => void }> = ({
             <div className="flex space-x-2 mb-2 sm:mb-0">
               <button
                 type="button"
-                className="flex items-center text-sm font-medium text-palette-secondary hover:text-blue-600 hover:bg-palette-hover rounded-lg px-3 py-1.5 transition-colors"
+                className="flex items-center text-sm font-medium text-palette-secondary hover:text-palette-accent hover:bg-palette-hover rounded-lg px-3 py-1.5 transition-colors"
                 onClick={handleImageUpload}
               >
                 <Image className="h-5 w-5 mr-1.5" />
@@ -98,21 +98,21 @@ const CreatePost: React.FC<{ onCreatePost: (post: any) => void }> = ({
               </button>
               <button
                 type="button"
-                className="flex items-center text-sm font-medium text-palette-secondary hover:text-blue-600 hover:bg-palette-hover rounded-lg px-3 py-1.5 transition-colors"
+                className="flex items-center text-sm font-medium text-palette-secondary hover:text-palette-accent hover:bg-palette-hover rounded-lg px-3 py-1.5 transition-colors"
               >
                 <User className="h-5 w-5 mr-1.5" />
                 <span className="hidden sm:inline">Tag</span>
               </button>
               <button
                 type="button"
-                className="flex items-center text-sm font-medium text-palette-secondary hover:text-blue-600 hover:bg-palette-hover rounded-lg px-3 py-1.5 transition-colors"
+                className="flex items-center text-sm font-medium text-palette-secondary hover:text-palette-accent hover:bg-palette-hover rounded-lg px-3 py-1.5 transition-colors"
               >
                 <Smile className="h-5 w-5 mr-1.5" />
                 <span className="hidden sm:inline">Feeling</span>
               </button>
               <button
                 type="button"
-                className="flex items-center text-sm font-medium text-palette-secondary hover:text-blue-600 hover:bg-palette-hover rounded-lg px-3 py-1.5 transition-colors"
+                className="flex items-center text-sm font-medium text-palette-secondary hover:text-palette-accent hover:bg-palette-hover rounded-lg px-3 py-1.5 transition-colors"
               >
                 <MapPin className="h-5 w-5 mr-1.5" />
                 <span className="hidden sm:inline">Location</span>
@@ -123,7 +123,7 @@ const CreatePost: React.FC<{ onCreatePost: (post: any) => void }> = ({
               type="submit"
               className={`px-4 py-1.5 rounded-lg text-sm font-medium transition-colors ${
                 content.trim()
-                  ? "bg-blue-600 text-white hover:bg-blue-700"
+                  ? "bg-palette-btn-bg text-palette-btn-text hover:bg-palette-btn-bg-hover"
                   : "bg-palette-hover text-palette-tertiary cursor-not-allowed"
               }`}
               disabled={!content.trim()}

@@ -66,7 +66,7 @@ const MarketplaceItem = () => {
                 <button
                   className={`p-2 rounded-full transition-colors ${
                     saved
-                      ? "bg-red-500 text-white"
+                      ? "bg-red-500 text-palette-btn-text"
                       : "bg-palette-card text-palette-primary hover:bg-palette-bg"
                   }`}
                   onClick={() => setSaved(!saved)}
@@ -81,7 +81,7 @@ const MarketplaceItem = () => {
                       key={index}
                       className={`w-2 h-2 rounded-full transition-colors ${
                         currentImageIndex === index
-                          ? "bg-blue-600"
+                          ? "bg-palette-btn-bg"
                           : "bg-gray-300"
                       }`}
                       onClick={() => setCurrentImageIndex(index)}
@@ -104,7 +104,7 @@ const MarketplaceItem = () => {
                   </div>
                 </div>
                 <div className="text-right">
-                  <div className="text-3xl font-bold text-blue-600">
+                  <div className="text-3xl font-bold text-palette-accent">
                     {formatPrice(item.price)}
                   </div>
                 </div>
@@ -171,7 +171,7 @@ const MarketplaceItem = () => {
                     <h3 className="font-medium text-palette-primary">
                       {relatedItem.title}
                     </h3>
-                    <div className="text-lg font-semibold text-blue-600 mt-1">
+                    <div className="text-lg font-semibold text-palette-accent mt-1">
                       {formatPrice(relatedItem.price)}
                     </div>
                     <div className="text-sm text-palette-tertiary mt-1">
@@ -200,7 +200,7 @@ const MarketplaceItem = () => {
                     {item.seller.name}
                   </h3>
                   {item.seller.verified && (
-                    <div className="text-blue-500">
+                    <div className="text-palette-secondary">
                       <Star className="h-4 w-4 fill-current" />
                     </div>
                   )}
@@ -216,7 +216,7 @@ const MarketplaceItem = () => {
                   <div>Member since {item.seller.memberSince}</div>
                   <div>{item.seller.listings} active listings</div>
                 </div>
-                <button className="mt-4 w-full px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center gap-2">
+                <button className="mt-4 w-full px-4 py-2 bg-palette-btn-bg text-palette-btn-text rounded-lg hover:bg-palette-btn-bg-hover transition-colors flex items-center justify-center gap-2">
                   <MessageCircle className="h-5 w-5" />
                   Contact Seller
                 </button>
@@ -227,7 +227,7 @@ const MarketplaceItem = () => {
           {/* Safety Tips */}
           <div className="bg-palette-card rounded-xl shadow-sm border border-palette-border p-6">
             <div className="flex items-center gap-2 text-palette-primary font-semibold mb-4">
-              <Shield className="h-5 w-5 text-blue-600" />
+              <Shield className="h-5 w-5 text-palette-accent" />
               Safety Tips
             </div>
             <div className="space-y-3 text-sm text-palette-secondary">

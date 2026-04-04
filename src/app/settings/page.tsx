@@ -77,7 +77,7 @@ const Settings = () => {
                         </label>
                         <input
                           type="text"
-                          className="w-full px-4 py-2 bg-palette-bg border border-palette-border rounded-lg text-palette-primary focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                          className="w-full px-4 py-2 bg-palette-bg border border-palette-border rounded-lg text-palette-primary focus:ring-2 focus:ring-palette-border focus:border-palette-border"
                           defaultValue="Alex Johnson"
                         />
                       </div>
@@ -87,7 +87,7 @@ const Settings = () => {
                         </label>
                         <input
                           type="email"
-                          className="w-full px-4 py-2 bg-palette-bg border border-palette-border rounded-lg text-palette-primary focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                          className="w-full px-4 py-2 bg-palette-bg border border-palette-border rounded-lg text-palette-primary focus:ring-2 focus:ring-palette-border focus:border-palette-border"
                           defaultValue="alex@example.com"
                         />
                       </div>
@@ -96,7 +96,7 @@ const Settings = () => {
                           Bio
                         </label>
                         <textarea
-                          className="w-full px-4 py-2 bg-palette-bg border border-palette-border rounded-lg text-palette-primary focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                          className="w-full px-4 py-2 bg-palette-bg border border-palette-border rounded-lg text-palette-primary focus:ring-2 focus:ring-palette-border focus:border-palette-border"
                           rows={3}
                           defaultValue="Product designer and creative director with over 8 years of experience in digital design."
                         />
@@ -194,7 +194,7 @@ const Settings = () => {
                         Choose who can see your profile
                       </div>
                     </div>
-                    <select className="px-3 py-2 bg-palette-bg border border-palette-border rounded-lg text-palette-primary focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                    <select className="px-3 py-2 bg-palette-bg border border-palette-border rounded-lg text-palette-primary focus:ring-2 focus:ring-palette-border focus:border-palette-border">
                       <option>Everyone</option>
                       <option>Friends Only</option>
                       <option>Private</option>
@@ -207,7 +207,7 @@ const Settings = () => {
                         Default privacy setting for new posts
                       </div>
                     </div>
-                    <select className="px-3 py-2 bg-palette-bg border border-palette-border rounded-lg text-palette-primary focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                    <select className="px-3 py-2 bg-palette-bg border border-palette-border rounded-lg text-palette-primary focus:ring-2 focus:ring-palette-border focus:border-palette-border">
                       <option>Public</option>
                       <option>Friends</option>
                       <option>Only Me</option>
@@ -252,7 +252,7 @@ const Settings = () => {
                         className="sr-only peer"
                         defaultChecked
                       />
-                      <div className="w-11 h-6 bg-gray-200 dark:bg-gray-600 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600"></div>
+                      <div className="w-11 h-6 bg-gray-200 dark:bg-gray-600 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-palette-border dark:peer-focus:ring-palette-border rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-palette-btn-bg"></div>
                     </label>
                   </div>
                   <div className="flex items-center justify-between py-3 border-t border-palette-border">
@@ -267,7 +267,7 @@ const Settings = () => {
                     </div>
                     <label className="relative inline-flex items-center cursor-pointer">
                       <input type="checkbox" className="sr-only peer" />
-                      <div className="w-11 h-6 bg-gray-200 dark:bg-gray-600 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600"></div>
+                      <div className="w-11 h-6 bg-gray-200 dark:bg-gray-600 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-palette-border dark:peer-focus:ring-palette-border rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-palette-btn-bg"></div>
                     </label>
                   </div>
                 </div>

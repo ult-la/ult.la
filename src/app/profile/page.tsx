@@ -61,7 +61,7 @@ const Profile = () => {
                   Product Designer • Creative Director
                 </p>
               </div>
-              <button className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors flex items-center gap-2">
+              <button className="px-4 py-2 bg-palette-btn-bg text-palette-btn-text rounded-lg hover:bg-palette-btn-bg-hover transition-colors flex items-center gap-2">
                 <Edit className="h-4 w-4" />
                 Edit Profile
               </button>
@@ -74,7 +74,7 @@ const Profile = () => {
               </div>
               <div className="flex items-center gap-1">
                 <LinkIcon className="h-4 w-4" />
-                <a href="#" className="text-blue-600 hover:underline">
+                <a href="#" className="text-palette-accent hover:underline">
                   alexjohnson.design
                 </a>
               </div>
@@ -104,7 +104,7 @@ const Profile = () => {
           <button
             className={`flex-1 px-4 py-3 text-sm font-medium border-b-2 transition-colors ${
               activeTab === "posts"
-                ? "border-blue-600 text-blue-600"
+                ? "border-palette-accent text-palette-accent"
                 : "border-transparent text-palette-tertiary hover:text-palette-primary"
             }`}
             onClick={() => setActiveTab("posts")}
@@ -117,7 +117,7 @@ const Profile = () => {
           <button
             className={`flex-1 px-4 py-3 text-sm font-medium border-b-2 transition-colors ${
               activeTab === "about"
-                ? "border-blue-600 text-blue-600"
+                ? "border-palette-accent text-palette-accent"
                 : "border-transparent text-palette-tertiary hover:text-palette-primary"
             }`}
             onClick={() => setActiveTab("about")}
@@ -130,7 +130,7 @@ const Profile = () => {
           <button
             className={`flex-1 px-4 py-3 text-sm font-medium border-b-2 transition-colors ${
               activeTab === "friends"
-                ? "border-blue-600 text-blue-600"
+                ? "border-palette-accent text-palette-accent"
                 : "border-transparent text-palette-tertiary hover:text-palette-primary"
             }`}
             onClick={() => setActiveTab("friends")}

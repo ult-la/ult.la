@@ -106,7 +106,7 @@ const RightSidebar = () => {
             <h3 className="text-sm font-semibold">Friend Requests</h3>
             <a
               href="#"
-              className="text-blue-600 text-xs font-medium hover:underline"
+              className="text-palette-accent text-xs font-medium hover:underline"
             >
               See All
             </a>
@@ -134,7 +134,7 @@ const RightSidebar = () => {
                     {request.mutualFriends} mutual friends
                   </div>
                   <div className="mt-2 flex space-x-2">
-                    <button className="px-3 py-1 bg-blue-600 text-white text-xs font-medium rounded-md hover:bg-blue-700 transition-colors">
+                    <button className="px-3 py-1 bg-palette-btn-bg text-palette-btn-text text-xs font-medium rounded-md hover:bg-palette-btn-bg-hover transition-colors">
                       Accept
                     </button>
                     <button className="px-3 py-1 bg-palette-hover text-palette-primary text-xs font-medium rounded-md hover:bg-palette-border transition-colors">
@@ -155,7 +155,7 @@ const RightSidebar = () => {
             <h3 className="text-sm font-semibold">People You May Know</h3>
             <a
               href="#"
-              className="text-blue-600 text-xs font-medium hover:underline"
+              className="text-palette-accent text-xs font-medium hover:underline"
             >
               See All
             </a>
@@ -195,8 +195,8 @@ const RightSidebar = () => {
       <div className="bg-palette-card rounded-xl shadow-sm border border-palette-border overflow-hidden mb-4">
         <div className="p-4">
           <div className="flex items-center gap-3">
-            <div className="p-2 bg-blue-100 rounded-lg">
-              <Gift className="h-5 w-5 text-blue-600" />
+            <div className="p-2 bg-palette-bg-tertiary rounded-lg">
+              <Gift className="h-5 w-5 text-palette-accent" />
             </div>
             <div>
               <h3 className="text-sm font-semibold">Birthdays</h3>
@@ -217,7 +217,7 @@ const RightSidebar = () => {
             <h3 className="text-sm font-semibold">Upcoming Events</h3>
             <a
               href="#"
-              className="text-blue-600 text-xs font-medium hover:underline"
+              className="text-palette-accent text-xs font-medium hover:underline"
             >
               View All
             </a>
@@ -258,7 +258,7 @@ const RightSidebar = () => {
       <div className="bg-palette-card rounded-xl shadow-sm border border-palette-border overflow-hidden mb-4">
         <div className="p-4 border-b border-palette-border-light">
           <div className="flex items-center gap-2">
-            <TrendingUp className="h-4 w-4 text-blue-600" />
+            <TrendingUp className="h-4 w-4 text-palette-accent" />
             <h3 className="text-sm font-semibold">Trending Topics</h3>
           </div>
         </div>
@@ -269,7 +269,7 @@ const RightSidebar = () => {
               className="p-2 hover:bg-palette-hover rounded-lg transition-colors"
             >
               <div className="flex items-center justify-between">
-                <span className="text-sm font-medium text-blue-600">
+                <span className="text-sm font-medium text-palette-accent">
                   {topic.topic}
                 </span>
                 <span className="text-xs text-palette-secondary">
@@ -285,7 +285,7 @@ const RightSidebar = () => {
       <div className="bg-palette-card rounded-xl shadow-sm border border-palette-border overflow-hidden mb-4">
         <div className="p-4 border-b border-palette-border-light">
           <div className="flex items-center gap-2">
-            <Bookmark className="h-4 w-4 text-blue-600" />
+            <Bookmark className="h-4 w-4 text-palette-accent" />
             <h3 className="text-sm font-semibold">Saved Items</h3>
           </div>
         </div>
@@ -338,7 +338,7 @@ const RightSidebar = () => {
               className="flex items-center py-1 px-2 rounded-lg hover:bg-palette-hover cursor-pointer"
             >
               <div className="relative">
-                <div className="h-8 w-8 bg-blue-100 rounded-full flex items-center justify-center text-blue-600">
+                <div className="h-8 w-8 bg-palette-bg-tertiary rounded-full flex items-center justify-center text-palette-accent">
                   <span className="text-xs font-medium">
                     {name.split(" ")[0][0]}
                     {name.split(" ")[1][0]}

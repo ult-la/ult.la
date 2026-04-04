@@ -14,7 +14,7 @@ export const ActivityStats = () => {
         </div>
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3 text-palette-secondary">
-            <MessageCircle className="h-5 w-5 text-blue-500" />
+            <MessageCircle className="h-5 w-5 text-palette-secondary" />
             <span>Active Chats</span>
           </div>
           <span className="font-medium">5</span>
