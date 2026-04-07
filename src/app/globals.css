@@ -66,6 +66,10 @@
   --color-btn-text: #0a0a0a;
 }
 
+html {
+  scrollbar-gutter: stable;
+}
+
 body {
   color: var(--color-text-primary);
   background: var(--color-bg);
